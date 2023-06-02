@@ -1,4 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+:root {
+  /* Font Family */
+
+  --font-stack-body: 'Familjen Grotesk',
+    sans-serif;
+  --font-stack-heading: 'Playfair Display',
+    serif;
+
+  /* Colors */
+
+  --primary-color: #98633B;
+  --secondary-color: #5A3828;
+  --tertiary-color: #42291A;
+  --warning-color: #FF9D00;
+  --error-color: #FF5252;
+  --success-color: #5277FF;
+  --grey: #464646;
+  --white: #F5F5F5;
+  --black: #0A0A0A;
+  --transparent: transparent;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
+
 body {
   margin: 0;
   font: 100% "Familjen Grotesk", sans-serif;

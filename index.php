@@ -1,8 +1,8 @@
-?<?php
+<?php
 
-  @include('./components/Header.php')
+@include('./components/Header.php')
 
-  ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,12 +33,12 @@
 
       <div class="right-hero">
         <figure>
-          <img src="../../assets/images/wood-1.png" alt="hero-content-1" class="hero-image" />
+          <img src="./assets/images/wood-1.png" alt="hero-content-1" class="hero-image" />
         </figure>
       </div>
     </section>
 
-    <section class="testimony">
+    <section class="testimony" id="testimony">
       <h2>Testimonials</h2>
       <div class="testimony-container">
         <div class="testimony-content">
@@ -66,9 +66,29 @@
         </div>
       </div>
     </section>
-  </main>
 
-  <script src="app.js"></script>
+    <section class="workshop" id="workshop">
+      <div class="left-workshop">
+        <figure>
+          <img src="./assets/images/workshop.png" alt="hero-content-2" class="hero-image" />
+        </figure>
+      </div>
+      <div class="right-workshop">
+        <h6>Premier Wood Selection for Discerning Customers</h6>
+        <h1>Woodcraft Workshop</h1>
+        <p>
+          Wood Craft Workshop is a dedicated and specialized
+          establishment where skilled craftsmen diligently bring
+          to life the artistry of woodwork, catering to the unique
+          requirements and visions of our esteemed customers.
+          With unwavering dedication and expertise,
+          our professional workers passionately transform raw wood
+          into exquisite creations, showcasing the timeless beauty
+          and craftsmanship that define our workshop.
+        </p>
+      </div>
+    </section>
+  </main>
 </body>
 
 ?<?php

@@ -3,7 +3,7 @@
 <header>
   <nav>
     <a href="/#" class="site-title">
-      <img src="path/to/logo-text.svg" alt="logo" width="96" height="13.64" />
+      <img src="./assets/logo/logo-text.svg" alt="logo" width="96" height="13.64" />
     </a>
     <ul class="nav-header">
       <li>

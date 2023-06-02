@@ -2,7 +2,7 @@
 
 <footer class="footer">
   <div class="left-container">
-    <img src="path/to/logo.svg" alt="Logo" width="128" height="72">
+    <img src="./assets/logo/logo-color-w-text.svg" alt="Logo" width="128" height="72">
     <p>&copy; 2023 Woodcraft. All rights reserved.</p>
   </div>
   <div class="right-container">

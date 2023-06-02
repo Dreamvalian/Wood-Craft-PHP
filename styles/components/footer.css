@@ -1,102 +1,51 @@
-@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
-body {
-  margin: 0;
-  font: 100% "Familjen Grotesk", sans-serif;
-  background-color: #F5F5F5;
-  color: #0A0A0A;
-  margin: 0;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-li {
-  list-style: none;
-  text-decoration: none;
-}
-
-figure {
-  margin: 0;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1rem;
-}
-
-h6 {
-  font-size: 0.8rem;
-}
-
-p {
-  font-size: 1rem;
-}
+@import url(../variable.css);
 
 .footer {
-  background-color: #F5F5F5;
+  background-color: var(--white);
   text-align: center;
-  color: #464646;
+  color: var(--grey);
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .footer .left-container {
   max-width: 960px;
   margin: auto;
   padding-bottom: 1rem;
   align-items: center;
 }
+
 .footer .left-container img {
   width: 128px;
   height: 72px;
   margin-right: 1rem;
 }
+
 .footer .right-container {
-  background-color: #42291A;
+  background-color: var(--tertiary-color);
   border-top-left-radius: 8rem;
-  color: #F5F5F5;
+  color: var(--white);
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 8rem;
   padding: 2rem;
 }
+
 .footer .right-container ul {
   list-style: none;
   padding: 1rem;
   font-weight: 600;
 }
+
 .footer .right-container ul li {
   margin-bottom: 0.5rem;
   font-weight: 400;
 }
+
 .footer .right-container ul li a {
-  color: #F5F5F5;
+  color: var(--white);
   text-decoration: none;
 }
 
