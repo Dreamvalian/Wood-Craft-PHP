@@ -28,5 +28,6 @@
         </a>
       </li>
     </ul>
+    <button data-bs-toogle="dropdown" aria-expanded="false"><a href="index.php?logout=1">Logout</a></button>
   </nav>
 </header>;

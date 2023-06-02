@@ -2,10 +2,10 @@
 session_start();
 include("../server/connection.php");
 
-// if (isset($_SESSION['logged_in'])) {
-//   header('location: ../index.php');
-//   exit;
-// } else {
+if (isset($_SESSION['logged_in'])) {
+  header('location: ../index.php');
+  exit;
+} else {
 if (isset($_POST['btn_login'])) {
   $login_username = $_POST['username'];
   //Nanti tambahin function md5() buat password biar dienkripsi
@@ -38,4 +38,4 @@ if (isset($_POST['btn_login'])) {
     header('location: ../pages/login.html?message=Something went wrong, try again later');
   }
 }
-// }
+}

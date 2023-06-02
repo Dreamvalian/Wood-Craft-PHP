@@ -2,10 +2,11 @@
 session_start();
 include("../server/connection.php");
 
-// if (isset($_SESSION['logged_in'])) {
-//   header('location: ../index.php');
-//   exit;
-// } else {
+
+if (isset($_SESSION['logged_in'])) {
+  header('location: ../index.php');
+  exit;
+} else {
 
 if (isset($_POST['btn_register'])) {
 
@@ -59,4 +60,4 @@ if (isset($_POST['btn_register'])) {
     }
   }
 }
-// }
+}

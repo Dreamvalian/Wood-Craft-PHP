@@ -5,8 +5,23 @@ session_start();
 include('server/connection.php');
 
 if (!isset($_SESSION['logged_in'])) {
-  header('location: pages/login.php');
+  header('location: pages/login.html');
   exit;
+}
+
+if (isset($_GET['logout'])) {
+  if (isset($_SESSION['logged_in'])) {
+      unset($_SESSION['logged_in']);
+      unset($_SESSION['user_id']);
+      unset($_SESSION['user_name']);
+      unset($_SESSION['user_email']);
+      unset($_SESSION['user_address']);
+      unset($_SESSION['user_role']);
+      header('location: ./pages/login.html');
+      exit;
+  } else {
+      echo "Session logged_in tidak ditemukan.";
+  }
 }
 
 ?>
