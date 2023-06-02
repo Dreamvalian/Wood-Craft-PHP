@@ -17,8 +17,8 @@ if (isset($_POST['btn_register'])) {
   $user_id = 'U' . $stmt_id->num_rows() + 1;
   $username = $_POST['username_reg'];
   $email = $_POST['email'];
-  $password = md5($_POST['password_reg']);
-  $confirm_password = md5($_POST['confirm_password']);
+  $password = $_POST['password_reg'];
+  $confirm_password = $_POST['confirm_password'];
   $address = $_POST['address'];
   $role = 'customer';
 
@@ -27,6 +27,7 @@ if (isset($_POST['btn_register'])) {
   } else if (strlen($password) < 6) {
     header('location: ../pages/login.html?error=Password must be at least 6 characters');
   } else {
+    $password = md5($password);
     $query_check_user = "SELECT COUNT(*) FROM user WHERE email = ?";
 
     $stmt_check_user = $conn->prepare($query_check_user);
