@@ -29,8 +29,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Dreamvalian/Software-Engineering-Projec">
-    <img src="./img/logo-white.svg" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Dreamvalian/WoodCraftProject">
+    <img src="./assets/logo/logo-color-w-text.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Software-Engineering Project</h3>
@@ -186,7 +186,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   - [ ] Gather feedback from stakeholders and address any identified issues.
   - [ ] Finalize the project and mark the completion of the sprint.
 
-See the [open issues](https://github.com/Dreamvalian/Software-Engineering-Project) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Dreamvalian/WoodCraftProject) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -224,7 +224,7 @@ Joseph Frinando Aritonang - 162021011 - joseph.frinando@mhs.itenas.ac.id<br/>
 Muhammad Hadiansyah Rabbani - 162021023 - muhammad.hadiansyah@mhs.itenas.ac.id<br/>
 Muhammad Fajar Maulana Madani - 162021012 - muhammad.fajarmaulana@mhs.itenas.ac.id<br/>
 
-Project Link: [https://github.com/Dreamvalian/Software-Engineering-Projec](https://github.com/Dreamvalian/Software-Engineering-Projec)
+Project Link: [https://github.com/Dreamvalian/WoodCraftProject](https://github.com/Dreamvalian/WoodCraftProject)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -239,16 +239,16 @@ Project Link: [https://github.com/Dreamvalian/Software-Engineering-Projec](https
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Dreamvalian/Wine-Warehouse.svg?style=for-the-badge
-[contributors-url]: https://github.com/Dreamvalian/Wine-Warehouse/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Dreamvalian/Wine-Warehouse.svg?style=for-the-badge
-[forks-url]: https://github.com/Dreamvalian/Wine-Warehouse/network/members
-[stars-shield]: https://img.shields.io/github/stars/Dreamvalian/Wine-Warehouse.svg?style=for-the-badge
-[stars-url]: https://github.com/Dreamvalian/Wine-Warehouse/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Dreamvalian/Wine-Warehouse.svg?style=for-the-badge
-[issues-url]: https://github.com/Dreamvalian/Wine-Warehouse/issues
-[license-shield]: https://img.shields.io/github/license/Dreamvalian/Wine-Warehouse.svg?style=for-the-badge
-[license-url]: https://github.com/Dreamvalian/Wine-Warehouse/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Dreamvalian/WoodCraftProject.svg?style=for-the-badge
+[contributors-url]: https://github.com/Dreamvalian/WoodCraftProject/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Dreamvalian/WoodCraftProject.svg?style=for-the-badge
+[forks-url]: https://github.com/Dreamvalian/WoodCraftProject/network/members
+[stars-shield]: https://img.shields.io/github/stars/Dreamvalian/WoodCraftProject.svg?style=for-the-badge
+[stars-url]: https://github.com/Dreamvalian/WoodCraftProject/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Dreamvalian/WoodCraftProject.svg?style=for-the-badge
+[issues-url]: https://github.com/Dreamvalian/WoodCraftProject/issues
+[license-shield]: https://img.shields.io/github/license/Dreamvalian/WoodCraftProject.svg?style=for-the-badge
+[license-url]: https://github.com/Dreamvalian/WoodCraftProject/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/hanifnugraha
 [product-screenshot]: /img/screenshot.png
