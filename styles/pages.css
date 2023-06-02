@@ -15,6 +15,15 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
 }
 
 h2 {
@@ -59,6 +68,18 @@ button {
 main {
   padding: 4rem 2rem 2rem 2rem;
 }
+
+/* Smooth Transition */
+.container form {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.container form.hidden {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
 
 /* Profile */
 
