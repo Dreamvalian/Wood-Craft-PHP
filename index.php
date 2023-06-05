@@ -48,7 +48,6 @@ if (!isset($_SESSION['logged_in'])) {
     </section>
 
     <section class="workshop" id="workshop">
-
       <div class="left-workshop">
         <figure>
           <img src="./assets/images/workshop.png" alt="hero-content-2" class="hero-image" />
@@ -67,6 +66,33 @@ if (!isset($_SESSION['logged_in'])) {
           into exquisite creations, showcasing the timeless beauty
           and craftsmanship that define our workshop.
         </p>
+      </div>
+    </section>
+
+    <section class="forest" id="forest">
+      <div class="left-forest">
+        <figure>
+          <img src="./assets/images/forest.png" alt="hero-content-2" class="hero-image" />
+        </figure>
+      </div>
+      <div class="right-forest">
+        <h6>Historical Significance of Forest Wood Craft in Artisan Traditions</h6>
+        <h1>Forest Wood Craft</h1>
+        <details>
+          <summary>Section 1</summary>
+          <p>This is the content for section 1.</p>
+        </details>
+
+        <details>
+          <summary>Section 2</summary>
+          <p>This is the content for section 2.</p>
+        </details>
+
+        <details>
+          <summary>Section 3</summary>
+          <p>This is the content for section 3.</p>
+        </details>
+
       </div>
     </section>
 
@@ -98,10 +124,10 @@ if (!isset($_SESSION['logged_in'])) {
         </div>
       </div>
     </section>
-
-
   </main>
 </body>
+
+<script src="./script.js"></script>
 
 <?php
 

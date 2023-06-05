@@ -107,4 +107,59 @@
   border-bottom-right-radius: 10rem;
 }
 
+
+/* Forest */
+
+.forest {
+  display: flex;
+}
+
+.forest .right-forest {
+  width: 50%;
+  margin: auto;
+  padding: 5rem;
+}
+
+.forest .right-forest h1 {
+  font-family: "Playfair Display", serif;
+}
+
+.forest .left-forest {
+  width: 50%;
+  margin: 0;
+  display: flex;
+}
+
+.forest .left-forest .hero-image {
+  margin-top: 2rem;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-bottom-right-radius: 10rem;
+}
+
+details {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+summary {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+details[open] summary {
+  background-color: #e0e0e0;
+}
+
+details>*:not(summary) {
+  padding: 0.5rem;
+}
+
+
 /*# sourceMappingURL=home.css.map */
