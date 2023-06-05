@@ -85,59 +85,49 @@ if (isset($_GET['logout'])) {
     </section>
 
     <section class="forest" id="forest">
-      <div class="left-forest">
+      <div class="forest-container">
         <h6>Historical Significance of Forest Wood Craft in Artisan Traditions</h6>
         <h1>Forest Wood Craft</h1>
         <details>
-          <summary>Section 1</summary>
-          <p>This is the content for section 1.</p>
+          <summary>The Origins of Forest Wood Craft</summary>
+          <p>Forest wood craft originated in ancient civilizations where people relied on the resources available in their surroundings. Forests provided abundant raw materials, including different types of wood, which were utilized to create functional objects, decorative pieces, and artistic expressions.</p>
+          <p>The early artisans, deeply connected with nature, developed their woodworking skills and techniques to harness the inherent beauty and strength of wood. They crafted various items like tools, furniture, carvings, and religious artifacts, showcasing their creativity and craftsmanship.</p>
         </details>
 
         <details>
-          <summary>Section 2</summary>
-          <p>This is the content for section 2.</p>
+          <summary>Preservation of Traditional Techniques</summary>
+          <p>Over the centuries, forest wood craft has evolved and diversified, adapting to the cultural, social, and technological changes of each era. Despite the introduction of modern machinery and mass production, traditional techniques and craftsmanship have been preserved by dedicated artisans who prioritize authenticity and cultural heritage.</p>
+          <p>These skilled artisans meticulously handcraft each piece, paying attention to every detail, and infusing their work with a sense of artistry and individuality. Their expertise is often passed down through apprenticeships or within family lineages, ensuring the continuity of these ancient techniques.</p>
         </details>
 
         <details>
-          <summary>Section 3</summary>
-          <p>This is the content for section 3.</p>
+          <summary>The Artistry of Forest Wood Craft</summary>
+          <p>Forest wood craft encompasses a wide range of artistic expressions, each showcasing the unique characteristics of wood and the imagination of the artisans. Carvings, sculptures, and relief works are common forms of artistic woodcraft, where intricate designs and motifs are meticulously chiseled or etched into the wood.</p>
+          <p>Furniture making is another prominent aspect of forest wood craft. Artisans skillfully transform blocks of wood into functional pieces that combine beauty and utility. Each piece of furniture is crafted with care, considering the grain patterns, textures, and natural colors of the wood to create harmonious and aesthetically pleasing designs.</p>
         </details>
-      </div>
-      <div class="right-forest">
-        <figure>
-          <img src="./assets/images/forest-wood-craft.jpg" alt="hero-content-2" class="hero-image" />
-        </figure>
       </div>
     </section>
 
-    <section class="testimony" id="testimony">
+    <section class="testimony">
       <h2>Testimonials</h2>
       <div class="testimony-container">
-        <div class="testimony-content">
-          <h3>"</h3>
-          <span>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            <br />
-            Qui tenetur fuga fugit vero commodi voluptatibus,
-            <br />
-            sequi repellat tempora amet molestias voluptatum labore optio,
-            <br />
-            repellendus quo atque aspernatur est nobis minima?
-          </span>
+        <div class="testimony-card">
+          <p>"I was amazed by the quality of the wood crafting products. They added an elegant touch to my home decor."</p>
+          <p class="name">- John Doe</p>
+        </div>
 
-          <h3>"</h3>
-          <span>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            <br />
-            Qui tenetur fuga fugit vero commodi voluptatibus,
-            <br />
-            sequi repellat tempora amet molestias voluptatum labore optio,
-            <br />
-            repellendus quo atque aspernatur est nobis minima?
-          </span>
+        <div class="testimony-card">
+          <p>"The minimalist design of the wood crafting items perfectly matched my aesthetic preferences. I'm extremely satisfied with my purchase."</p>
+          <p class="name">- Jane Smith</p>
+        </div>
+
+        <div class="testimony-card">
+          <p>"The glamorous wood crafting pieces have become the centerpiece of my living room. They truly elevate the ambiance."</p>
+          <p class="name">- Alex Johnson</p>
         </div>
       </div>
     </section>
+
   </main>
 </body>
 

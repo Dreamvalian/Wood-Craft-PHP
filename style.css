@@ -40,40 +40,6 @@
   border-top-left-radius: 10rem;
 }
 
-/* Testimony */
-
-.Testimony {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Familjen Grotesk", sans-serif;
-}
-
-.Testimony h2 {
-  font-family: "Playfair Display", serif;
-}
-
-.Testimony .testimony-container {
-  overflow: hidden;
-  padding-top: 2rem;
-}
-
-.Testimony .testimony-container h3 {
-  border-left: 3px solid var(--black);
-  padding-left: 2rem;
-}
-
-.Testimony .testimony-container .testimony-content {
-  white-space: nowrap;
-  animation: marquee 60s linear infinite;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 2rem;
-  padding-bottom: 2rem;
-}
-
 /* Workshop */
 
 .workshop {
@@ -107,35 +73,29 @@
 /* Forest */
 
 .forest {
-  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-image: url('./assets/images/forest-wood-craft.jpg');
+  color: var(--white);
+  margin-top: 2rem;
 }
 
-.forest .left-forest {
-  width: 50%;
-  margin: auto;
+.forest .forest-container {
   padding: 5rem;
+  background-color: rgba(10, 10, 10, 0.4);
+  /* Add an overlay for better readability */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
-.forest .left-forest h1 {
+
+.forest .forest-container h1 {
   font-family: "Playfair Display", serif;
 }
 
-.forest .right-forest {
-  width: 50%;
-  margin: 0;
-  display: flex;
-}
-
-.forest .right-forest .hero-image {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  border-top-left-radius: 10rem;
-}
-
 details {
-  border: 1px solid #ccc;
+  border: 1px solid var(--grey);
   border-radius: 4px;
   margin-bottom: 1rem;
 }
@@ -144,16 +104,57 @@ summary {
   cursor: pointer;
   padding: 0.5rem;
   font-weight: bold;
-  background-color: #f0f0f0;
+  background-color: var(--primary-color);
   outline: none;
 }
 
 details[open] summary {
-  background-color: #e0e0e0;
+  background-color: var(--primary-color);
+  color: var(--white);
 }
 
-details > *:not(summary) {
+details>*:not(summary) {
   padding: 0.5rem;
+}
+
+/* Testimony */
+
+.Testimony {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  font-family: var(--font-stack-heading);
+}
+
+.testimony-container {
+  display: flex;
+  font-family: var(--font-stack-body);
+}
+
+.testimony-card {
+  background-color: var(--white);
+  border-radius: 5px;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimony-card p {
+  font-size: 1rem;
+  color: var(--grey);
+  margin-bottom: 2rem;
+}
+
+.testimony-card .name {
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: var(grey);
 }
 
 /*# sourceMappingURL=home.css.map */
