@@ -11,16 +11,16 @@ if (!isset($_SESSION['logged_in'])) {
 
 if (isset($_GET['logout'])) {
   if (isset($_SESSION['logged_in'])) {
-      unset($_SESSION['logged_in']);
-      unset($_SESSION['user_id']);
-      unset($_SESSION['user_name']);
-      unset($_SESSION['user_email']);
-      unset($_SESSION['user_address']);
-      unset($_SESSION['user_role']);
-      header('location: ./pages/login.html');
-      exit;
+    unset($_SESSION['logged_in']);
+    unset($_SESSION['user_id']);
+    unset($_SESSION['user_name']);
+    unset($_SESSION['user_email']);
+    unset($_SESSION['user_address']);
+    unset($_SESSION['user_role']);
+    header('location: ./pages/login.html');
+    exit;
   } else {
-      echo "Session logged_in tidak ditemukan.";
+    echo "Session logged_in tidak ditemukan.";
   }
 }
 
@@ -86,11 +86,6 @@ if (isset($_GET['logout'])) {
 
     <section class="forest" id="forest">
       <div class="left-forest">
-        <figure>
-          <img src="./assets/images/forest.png" alt="hero-content-2" class="hero-image" />
-        </figure>
-      </div>
-      <div class="right-forest">
         <h6>Historical Significance of Forest Wood Craft in Artisan Traditions</h6>
         <h1>Forest Wood Craft</h1>
         <details>
@@ -107,7 +102,11 @@ if (isset($_GET['logout'])) {
           <summary>Section 3</summary>
           <p>This is the content for section 3.</p>
         </details>
-
+      </div>
+      <div class="right-forest">
+        <figure>
+          <img src="./assets/images/forest-wood-craft.jpg" alt="hero-content-2" class="hero-image" />
+        </figure>
       </div>
     </section>
 
