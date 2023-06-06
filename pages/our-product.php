@@ -32,17 +32,37 @@
     <div class="left-product">
       <h2>Our
         Products</h2>
-      <h5>kayu yang kami miliki memiliki kualitas yang
-        yang premium dan tahan lama</h5>
+      <p>Introducing our exceptional Forest Wood Craft collection, a testament to the timeless beauty and craftsmanship of artisan traditions. Each piece in this collection is meticulously handcrafted by skilled artisans who are deeply connected to nature and passionate about their craft.
+        </br>
+        </br>
+        Our Forest Wood Craft products are created using carefully selected and sustainable wood sourced from responsibly managed forests. We prioritize the use of reclaimed or salvaged wood, giving new life to materials and promoting environmental conservation.
+
     </div>
     <div class="right-product">
-      <img src="../assets/images/product-1.jpg" alt="product-image-1" class="product-image">
-      <p></p>
-      <img src="../assets/images/product-2.jpg" alt="product-image-2" class="product-image-2">
-      <p></p>
-      <img src="../assets/images/product-3.jpg" alt="product-image-3" class="product-image-2">
-      <p></p>
-    </div>
+      <div class="slider owl-carousel">
+        <div class="slide">
+          <img class="product-image" src="../assets/images/product-1.jpg" alt="product-slider-1">
+          <h4 class="slide-title">Teak</h4>
+          <p class="slide-subtitle">Teak wood has high density and good strength</p>
+        </div>
+        <div class="slide">
+          <img class="product-image" src="../assets/images/product-2.jpg" alt="product-slider-2">
+          <h4 class="slide-title">Ulin</h4>
+          <p class="slide-subtitle">Ulin wood has a high density</p>
+        </div>
+        <div class="slide">
+          <img class="product-image" src="../assets/images/product-3.jpg" alt="product-slider-3">
+          <h4 class="slide-title">Bengkirai</h4>
+          <p class="slide-subtitle">Bengkirai wood has good strength and attractive color and appearance.</p>
+        </div>
+        <div class="slide">
+          <img class="product-image" src="../assets/images/product-7.jpg" alt="product-slider-3">
+          <h4 class="slide-title">Mahoni</h4>
+          <p class="slide-subtitle">has straight fibers, is resistant to
+            shrinkage, and has an attractive red
+            brownish color.</p>
+        </div>
+      </div>
   </section>
 
   <section class="works">
@@ -50,13 +70,13 @@
     <h5>Hasil pekerjaan Wood Craft dan digunakan untuk desain interior rumah clients kita</h5>
     <div class="slider owl-carousel">
       <div class="slide">
-        <img class="slider-image" src="../assets/images/product-4.jpg" alt="product-slider-1">
+        <img class="slider-image" src="../assets/images/product-4.jpg" alt="product-slider-4">
       </div>
       <div class="slide">
-        <img class="slider-image" src="../assets/images/product-5.jpg" alt="product-slider-2">
+        <img class="slider-image" src="../assets/images/product-5.jpg" alt="product-slider-5">
       </div>
       <div class="slide">
-        <img class="slider-image" src="../assets/images/product-6.jpg" alt="product-slider-3">
+        <img class="slider-image" src="../assets/images/product-6.jpg" alt="product-slider-6">
       </div>
     </div>
   </section>

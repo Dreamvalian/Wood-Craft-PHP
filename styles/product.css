@@ -43,7 +43,9 @@
 
 .product .left-product {
   width: 50%;
-  margin: 2rem 0rem 0rem 4rem;
+  margin: 0rem 2rem 0rem 4rem;
+  padding-right: 2rem;
+
 }
 
 .product .left-product h2 {
@@ -60,6 +62,7 @@
   margin: 0;
   display: flex;
   gap: 0.5rem;
+
 }
 
 .product .right-product .product-image {
@@ -67,9 +70,9 @@
   max-width: 100%;
   max-height: 100%;
   width: auto;
-  height: auto;
-  border-top-left-radius: 5rem;
+  height: 254px;
   overflow: hidden;
+  gap: 0;
 }
 
 .product .right-product .product-image-2 {
