@@ -23,17 +23,3 @@ function showRegisterForm(event) {
   registerForm.style.display = "block";
   loginForm.style.display = "none";
 }
-
-// Validate the password and confirm password fields on form submission
-// registerForm.addEventListener('submit', function (event) {
-//   event.preventDefault();
-//   const passwordInput = document.getElementById('passwordInput');
-//   const confirmPasswordInput = document.getElementById('confirmPasswordInput');
-
-//   if (passwordInput.value !== confirmPasswordInput.value) {
-//     alert("Password doesn't match");
-//   } else {
-//     // Submit the form if validation passes
-//     registerForm.submit();
-//   }
-// });
