@@ -81,7 +81,7 @@ $products = $stmt_product->get_result();
 
   <section class="works">
     <h2>Our Works</h2>
-    <h5>Hasil pekerjaan Wood Craft dan digunakan untuk desain interior rumah clients kita</h5>
+    <h5>The results of WoodCraft work and used for the interior design of our clients' homes</h5>
     <div class="slider owl-carousel">
       <div class="slide">
         <img class="slider-image" src="./assets/images/product-4.jpg" alt="product-slider-4">
