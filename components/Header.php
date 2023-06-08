@@ -8,17 +8,17 @@
     <div class="nav-container">
       <ul class="nav-header">
         <li>
-          <a href="/#" class="nav-item">
+          <a href="our-product.php" class="nav-item">
             our product
           </a>
         </li>
         <li>
-          <a href="/#" class="nav-item">
+          <a href="about.html" class="nav-item">
             about
           </a>
         </li>
         <li>
-          <a href="/#" class="nav-item">
+          <a href="contact.html" class="nav-item">
             contact us
           </a>
         </li>
