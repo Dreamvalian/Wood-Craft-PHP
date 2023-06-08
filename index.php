@@ -50,15 +50,53 @@ if (isset($_GET['logout'])) {
           and furniture. We are a center of creativity and high quality in producing
           unique and captivating wooden products.
         </p>
-        <button type="submit" onclick="handleClick()">
-          Order now
-        </button>
+        <a href="./our-product.php">
+          <button type="submit" onclick="handleClick()">
+            Order now
+          </button>
+        </a>
       </div>
 
       <div class="right-hero">
         <figure>
           <img src="./assets/images/wood-1.png" alt="hero-content-1" class="hero-image" />
         </figure>
+      </div>
+    </section>
+
+    <section class="link-to" id="link-to">
+      <a href="#forest" class="link-to-forest">
+        <h3>Wood Forest</h3>
+        <svg width="81" height="40" viewBox="0 0 81 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M61 38.5C71.2173 38.5 79.5 30.2173 79.5 20C79.5 9.78273 71.2173 1.5 61 1.5C50.7827 1.5 42.5 9.78273 42.5 20C42.5 30.2173 50.7827 38.5 61 38.5Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M60.3359 24.0479L64.3359 20.0479L60.3359 16.0479" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M1.5 20.5L64.3359 20.0479" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <a href="#workshop" class="link-to-workshop">
+        <h3>Workshops</h3>
+        <svg width="81" height="40" viewBox="0 0 81 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M61 38.5C71.2173 38.5 79.5 30.2173 79.5 20C79.5 9.78273 71.2173 1.5 61 1.5C50.7827 1.5 42.5 9.78273 42.5 20C42.5 30.2173 50.7827 38.5 61 38.5Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M60.3359 24.0479L64.3359 20.0479L60.3359 16.0479" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M1.5 20.5L64.3359 20.0479" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <a href="#testimony" class="link-to-testimony">
+        <h3>Testimonials</h3>
+        <svg width="81" height="40" viewBox="0 0 81 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M61 38.5C71.2173 38.5 79.5 30.2173 79.5 20C79.5 9.78273 71.2173 1.5 61 1.5C50.7827 1.5 42.5 9.78273 42.5 20C42.5 30.2173 50.7827 38.5 61 38.5Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M60.3359 24.0479L64.3359 20.0479L60.3359 16.0479" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M1.5 20.5L64.3359 20.0479" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </section>
+
+    <section class="forest" id="forest">
+      <div class="forest-container">
+        <h1>Forest Wood Craft</h1>
+        <p>WoodCraft has its own wood forest.
+          and the quality is maintained until it reaches
+          to the customer's hand</p>
       </div>
     </section>
 
@@ -84,31 +122,7 @@ if (isset($_GET['logout'])) {
       </div>
     </section>
 
-    <section class="forest" id="forest">
-      <div class="forest-container">
-        <h6>Historical Significance of Forest Wood Craft in Artisan Traditions</h6>
-        <h1>Forest Wood Craft</h1>
-        <details>
-          <summary>The Origins of Forest Wood Craft</summary>
-          <p>Forest wood craft originated in ancient civilizations where people relied on the resources available in their surroundings. Forests provided abundant raw materials, including different types of wood, which were utilized to create functional objects, decorative pieces, and artistic expressions.</p>
-          <p>The early artisans, deeply connected with nature, developed their woodworking skills and techniques to harness the inherent beauty and strength of wood. They crafted various items like tools, furniture, carvings, and religious artifacts, showcasing their creativity and craftsmanship.</p>
-        </details>
-
-        <details>
-          <summary>Preservation of Traditional Techniques</summary>
-          <p>Over the centuries, forest wood craft has evolved and diversified, adapting to the cultural, social, and technological changes of each era. Despite the introduction of modern machinery and mass production, traditional techniques and craftsmanship have been preserved by dedicated artisans who prioritize authenticity and cultural heritage.</p>
-          <p>These skilled artisans meticulously handcraft each piece, paying attention to every detail, and infusing their work with a sense of artistry and individuality. Their expertise is often passed down through apprenticeships or within family lineages, ensuring the continuity of these ancient techniques.</p>
-        </details>
-
-        <details>
-          <summary>The Artistry of Forest Wood Craft</summary>
-          <p>Forest wood craft encompasses a wide range of artistic expressions, each showcasing the unique characteristics of wood and the imagination of the artisans. Carvings, sculptures, and relief works are common forms of artistic woodcraft, where intricate designs and motifs are meticulously chiseled or etched into the wood.</p>
-          <p>Furniture making is another prominent aspect of forest wood craft. Artisans skillfully transform blocks of wood into functional pieces that combine beauty and utility. Each piece of furniture is crafted with care, considering the grain patterns, textures, and natural colors of the wood to create harmonious and aesthetically pleasing designs.</p>
-        </details>
-      </div>
-    </section>
-
-    <section class="testimony">
+    <section class="testimony" id="testimony">
       <h2>Testimonials</h2>
       <div class="testimony-container">
         <div class="testimony-card">
