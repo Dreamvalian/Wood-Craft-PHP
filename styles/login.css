@@ -1,5 +1,12 @@
 @import url(variable.css);
 
+body {
+  background-image: url(../assets/images/forest-wood-craft.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -10,14 +17,15 @@
 /* Login & Register */
 
 .form {
-  background-color: var(--white);
+  background-color: var(--black);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   text-align: center;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  opacity: 1;
   transform: translateY(0);
+  opacity: 0.8;
+  color: var(--white);
 }
 
 .form.hidden {
@@ -27,20 +35,19 @@
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-family: var(--font-stack-heading);
 }
 
 input {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  border: 1px solid var(--grey);
+  border: 1px solid var(--white);
   border-radius: 4px;
 }
 
 button {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: var(--white);
   padding: 0.5rem 1rem;
   border: none;
@@ -56,7 +63,7 @@ button {
 
 .register-link a,
 .login-link a {
-  color: var(--secondary-color);
+  color: var(--white);
   text-decoration: none;
 }
 

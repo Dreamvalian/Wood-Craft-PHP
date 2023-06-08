@@ -1,7 +1,5 @@
 <?php
-
-@include('../components/Header.php')
-
+@include('./components/Header.php')
 ?>
 
 <!DOCTYPE html>
@@ -18,9 +16,9 @@
 </head>
 
 <body>
+  <h2>Product Cart</h2>
   <section class="cart">
-    <h1>Product Cart</h1>
-    <div class="container">
+    <div class="cart-container">
       <div class="cart-items">
         <img src="product1.jpg" alt="Product 1">
         <div class="cart-item-details">
@@ -46,15 +44,23 @@
       </div>
 
       <div class="cart-items">
-        <img src="product3.jpg" alt="Product 3">
+        <img src="product4.jpg" alt="Product 4">
         <div class="cart-item-details">
-          <h3 class="cart-item-title">Product 3</h3>
+          <h3 class="cart-item-title">Product 4</h3>
           <p class="cart-item-price">$24.99</p>
         </div>
       </div>
     </div>
+    <div class="cart-summary">
+      <h5>Order Summary</h5>
+      <div class="cart-subtotal">
+        <h5>Sub Total: </h5>
+        <hr>
+      </div>
+      <h5>Total: </h5>
+      <button id="add-to-cart-btn">Buy Now</button>
+    </div>
   </section>
-
 </body>
 
 </html>
