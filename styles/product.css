@@ -1,4 +1,4 @@
-@import url(../styles/variable.css);
+@import url(variable.css);
 
 /* Our Product */
 
@@ -8,6 +8,7 @@
   background-size: cover;
   background-position: center;
   color: var(--white);
+  padding-top: 4rem;
 }
 
 .hero .hero-container {

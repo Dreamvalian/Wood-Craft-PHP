@@ -10,10 +10,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Profile</title>
-  <link rel="stylesheet" href="./styles/pages.css">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./styles/profile.css">
   <link rel="stylesheet" href="./dist/output.css">
+  <title>User Profile</title>
 </head>
 
 <body>

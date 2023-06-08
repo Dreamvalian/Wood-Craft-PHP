@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./styles/product.css" />
   <link rel="stylesheet" href="./styles/components/header.css" />
   <link rel="stylesheet" href="./styles/components/footer.css" />
+  <link rel="stylesheet" href="/dist/output.css">
   <link rel="stylesheet" href="./assets/lib/owl.carousel.min.css">
   <link rel="stylesheet" href="./assets/lib/owl.theme.default.min.css">
   <title>Woodcraft - Our Product</title>
