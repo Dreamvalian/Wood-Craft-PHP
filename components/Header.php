@@ -23,17 +23,31 @@
           </a>
         </li>
         <li>|</li>
-        <li>
-          <a href="/#" class="nav-item">
+        <li class="dropdown">
+          <a href="/#" class="nav-item dropdown-toggle">
             profile
           </a>
+          <ul class="dropdown-menu">
+            <li><a href="index.php?logout=1">Logout</a></li>
+          </ul>
         </li>
       </ul>
-      <button class="logout-button">
-        <a href="index.php?logout=1">
-          Logout
-        </a>
-      </button>
     </div>
   </nav>
-</header>;
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the dropdown toggle elements
+      const dropdownToggle = document.querySelectorAll(".dropdown-toggle");
+
+      // Add click event listener to each dropdown toggle
+      dropdownToggle.forEach(function(toggle) {
+        toggle.addEventListener("click", function() {
+          // Toggle the dropdown menu visibility
+          const dropdownMenu = this.nextElementSibling;
+          dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+        });
+      });
+    });
+  </script>
+</header>

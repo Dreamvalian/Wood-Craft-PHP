@@ -1,6 +1,6 @@
 <?php
 
-@include('../components/Header.php')
+@include('./components/Header.php')
 
 ?>
 
@@ -11,12 +11,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/product.css" />
+  <link rel="stylesheet" href="./styles/components/header.css" />
+  <link rel="stylesheet" href="./styles/components/footer.css" />
+  <link rel="stylesheet" href="./assets/lib/owl.carousel.min.css">
+  <link rel="stylesheet" href="./assets/lib/owl.theme.default.min.css">
   <title>Woodcraft - Our Product</title>
-  <link rel="stylesheet" href="../styles/product.css" />
-  <link rel="stylesheet" href="../styles/components/header.css" />
-  <link rel="stylesheet" href="../styles/components/footer.css" />
-  <link rel="stylesheet" href="../assets/lib/owl.carousel.min.css">
-  <link rel="stylesheet" href="../assets/lib/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -36,27 +36,26 @@
         </br>
         </br>
         Our Forest Wood Craft products are created using carefully selected and sustainable wood sourced from responsibly managed forests. We prioritize the use of reclaimed or salvaged wood, giving new life to materials and promoting environmental conservation.
-
     </div>
     <div class="right-product">
       <div class="slider owl-carousel">
         <div class="slide">
-          <img class="product-image" src="../assets/images/product-1.jpg" alt="product-slider-1">
+          <img class="product-image" src="./assets/images/product-1.jpg" alt="product-slider-1">
           <h4 class="slide-title">Teak</h4>
           <p class="slide-subtitle">Teak wood has high density and good strength</p>
         </div>
         <div class="slide">
-          <img class="product-image" src="../assets/images/product-2.jpg" alt="product-slider-2">
+          <img class="product-image" src="./assets/images/product-2.jpg" alt="product-slider-2">
           <h4 class="slide-title">Ulin</h4>
           <p class="slide-subtitle">Ulin wood has a high density</p>
         </div>
         <div class="slide">
-          <img class="product-image" src="../assets/images/product-3.jpg" alt="product-slider-3">
+          <img class="product-image" src="./assets/images/product-3.jpg" alt="product-slider-3">
           <h4 class="slide-title">Bengkirai</h4>
           <p class="slide-subtitle">Bengkirai wood has good strength and attractive color and appearance.</p>
         </div>
         <div class="slide">
-          <img class="product-image" src="../assets/images/product-7.jpg" alt="product-slider-3">
+          <img class="product-image" src="./assets/images/product-7.jpg" alt="product-slider-3">
           <h4 class="slide-title">Mahoni</h4>
           <p class="slide-subtitle">has straight fibers, is resistant to
             shrinkage, and has an attractive red
@@ -70,19 +69,19 @@
     <h5>Hasil pekerjaan Wood Craft dan digunakan untuk desain interior rumah clients kita</h5>
     <div class="slider owl-carousel">
       <div class="slide">
-        <img class="slider-image" src="../assets/images/product-4.jpg" alt="product-slider-4">
+        <img class="slider-image" src="./assets/images/product-4.jpg" alt="product-slider-4">
       </div>
       <div class="slide">
-        <img class="slider-image" src="../assets/images/product-5.jpg" alt="product-slider-5">
+        <img class="slider-image" src="./assets/images/product-5.jpg" alt="product-slider-5">
       </div>
       <div class="slide">
-        <img class="slider-image" src="../assets/images/product-6.jpg" alt="product-slider-6">
+        <img class="slider-image" src="./assets/images/product-6.jpg" alt="product-slider-6">
       </div>
     </div>
   </section>
 
-  <script src="../assets/lib/jquery-3.7.0.min.js"></script>
-  <script src="../assets/lib/owl.carousel.min.js"></script>
+  <script src="./assets/lib/jquery-3.7.0.min.js"></script>
+  <script src="./assets/lib/owl.carousel.min.js"></script>
   <script>
     $(document).ready(function() {
       $('.slider.owl-carousel').owlCarousel({
@@ -101,7 +100,7 @@
 
 <?php
 
-@include('../components/Footer.php')
+@include('./components/Footer.php')
 
 ?>
 

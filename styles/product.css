@@ -8,7 +8,6 @@
   background-size: cover;
   background-position: center;
   color: var(--white);
-  margin-top: 2rem;
 }
 
 .hero .hero-container {
@@ -61,8 +60,7 @@
   width: 50%;
   margin: 0;
   display: flex;
-  gap: 0.5rem;
-
+  gap: 1rem;
 }
 
 .product .right-product .product-image {
@@ -79,6 +77,10 @@
   margin-top: 2rem;
   overflow: hidden;
 }
+
+/* .product .right-product .slide {
+  margin: auto;
+} */
 
 /* Our Works */
 
