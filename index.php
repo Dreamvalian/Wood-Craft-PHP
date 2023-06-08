@@ -40,7 +40,6 @@ if (isset($_GET['logout'])) {
 <body>
 
   <main>
-
     <section class="hero" id="hero">
       <div class="left-hero">
         <h6>The Best Wood For Customer</h6>
