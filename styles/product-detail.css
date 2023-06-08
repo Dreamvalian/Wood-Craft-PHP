@@ -54,26 +54,44 @@
 }
 
 .add-to-cart {
+  background-color: var(--white);
+  border: 1px solid var(--tertiary-color);
+  border-radius: 4px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 #minus-btn,
 #plus-btn {
-  font-size: 1.5rem;
-  width: 30px;
-  height: 30px;
-  border: none;
+  padding: 0.5rem;
   background-color: var(--primary-color);
   color: var(--white);
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 #range-input {
-  width: 200px;
+  margin: 0 0.5rem;
+  width: 60px;
+  text-align: center;
 }
+
 
 h5 {
   font-size: 1rem;

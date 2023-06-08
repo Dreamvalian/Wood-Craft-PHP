@@ -35,15 +35,21 @@
       <textarea class="product-custom-model" name="product-custom-model" id="" cols="30" rows="10"></textarea>
     </div>
     <div class="add-to-cart">
-      <h5></h5>
-      <button id="minus-btn">-</button>
-      <input type="range" id="range-input" min="0" max="100" step="1" value="50">
-      <button id="plus-btn">+</button>
-      <h5>Stock: </h5>
-      <h5>Sub Total: </h5>
-      </hr>
-      <button id="add-to-cart-btn">Add to Cart</button>
-      <button id="add-to-cart-btn">Buy Now</button>
+      <div class="cart-content">
+        <h5>Organize Order</h5>
+        <div class="input-wrapper">
+          <button id="minus-btn">-</button>
+          <input type="number" id="range-input" min="0" max="100" step="1" value="50">
+          <button id="plus-btn">+</button>
+        </div>
+      </div>
+      <div class="cart-stock">
+        <h5>Stock: </h5>
+        <h5>Sub Total: </h5>
+        </hr>
+        <button id="add-to-cart-btn">Add to Cart</button>
+        <button id="add-to-cart-btn">Buy Now</button>
+      </div>
     </div>
   </section>
 </body>
