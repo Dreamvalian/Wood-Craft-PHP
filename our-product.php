@@ -1,6 +1,18 @@
 <?php
+session_start();
 
-@include('./components/Header.php')
+@include('./components/Header.php');
+include('server/connection.php');
+
+if (!isset($_SESSION['logged_in'])) {
+  header('location: pages/login.html');
+  exit;
+}
+
+$query_product = "SELECT product_id, jenis_kayu, product_price, product_description, product_image FROM kayu";
+$stmt_product = $conn->prepare($query_product);
+$stmt_product->execute();
+$products = $stmt_product->get_result();
 
 ?>
 
@@ -40,12 +52,14 @@
     </div>
     <div class="right-product">
       <div class="slider owl-carousel">
-        <div class="slide">
-          <img class="product-image" src="./assets/images/product-1.jpg" alt="product-slider-1">
-          <h4 class="slide-title">Teak</h4>
-          <p class="slide-subtitle">Teak wood has high density and good strength</p>
-        </div>
-        <div class="slide">
+        <?php while ($row = $products->fetch_assoc()) { ?>
+          <div class="slide">
+            <img class="product-image" src="./assets/images/<?php echo $row['product_image']; ?>" alt="product-slider-1">
+            <h4 class="slide-title"><?php echo $row['jenis_kayu']; ?></h4>
+            <p class="slide-subtitle"><?php echo $row['product_description']; ?></p>
+          </div>
+        <?php } ?>
+        <!-- <div class="slide">
           <img class="product-image" src="./assets/images/product-2.jpg" alt="product-slider-2">
           <h4 class="slide-title">Ulin</h4>
           <p class="slide-subtitle">Ulin wood has a high density</p>
@@ -61,7 +75,7 @@
           <p class="slide-subtitle">has straight fibers, is resistant to
             shrinkage, and has an attractive red
             brownish color.</p>
-        </div>
+        </div> -->
       </div>
   </section>
 
