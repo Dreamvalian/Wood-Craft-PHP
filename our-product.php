@@ -54,7 +54,7 @@ $products = $stmt_all_product->get_result();
       <div class="slider owl-carousel">
         <?php while ($row = $products->fetch_assoc()) { ?>
           <div class="slide">
-            <a href="product-detail.php?product_id=<?php echo $row['product_id'] ?>">
+            <a href="./product-detail.php?product_id=<?php echo $row['product_id'] ?>">
               <img class="product-image" src="./assets/images/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_image']; ?>">
             </a>
             <h4 class="slide-title"><?php echo $row['jenis_kayu']; ?></h4>
