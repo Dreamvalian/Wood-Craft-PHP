@@ -35,8 +35,8 @@
         with us, you enter a family
         business, with a personal
         approach and global experience.</p>
-      <h6>Wood Craft Company
-        2023</h6>
+      <h6>WoodCraft
+        © 2023</h6>
     </div>
   </section>
   <section class="about">
