@@ -57,10 +57,9 @@ if (isset($_GET['logout'])) {
         </a>
       </div>
 
-      <div class="right-hero">
-        <figure>
+      <div class="right-hero carousel">
+        <figure class="right-hero-wrapper">
           <img src="./assets/images/wood-1.png" alt="hero-content-1" class="hero-image" />
-        </figure>
       </div>
     </section>
 

@@ -13,7 +13,8 @@
 .profile {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
+  padding-top: 5rem;
+  margin: 0 2rem 0 2rem;
 }
 
 .profile-avatar img {
@@ -21,6 +22,7 @@
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
+  gap: 2rem;
   margin-right: 1rem;
 }
 
@@ -30,12 +32,11 @@
 }
 
 .transaction-history {
-  margin-bottom: 2.5rem;
+  margin: 2rem;
 }
 
 .transaction-history h2 {
   font-family: var(--font-stack-heading);
-  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 

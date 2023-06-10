@@ -1,0 +1,62 @@
+@import url(variable.css);
+
+.contact {
+  padding-top: 4rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0 2rem 0;
+  background: url(../assets/images/background-contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: var(--box-shadow);
+}
+
+.contact-heading {
+  text-align: center;
+}
+
+.contact-heading h2 {
+  font-family: var(--font-stack-heading);
+}
+
+.contact-form label {
+  display: block;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+}
+
+button {
+  background-color: var(--tertiary-color);
+  color: var(--white);
+  padding: 8px 32px 8px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}

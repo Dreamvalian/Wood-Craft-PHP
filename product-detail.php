@@ -27,7 +27,6 @@ $product = $stmt_product->get_result();
 </head>
 
 <body>
-
   <?php while ($row = $product->fetch_assoc()) { ?>
     <section class="detail">
       <img class="product-image" src="./assets/images/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_image']; ?>"></img>

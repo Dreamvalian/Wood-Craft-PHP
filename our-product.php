@@ -65,18 +65,6 @@ $products = $stmt_all_product->get_result();
           <img class="product-image" src="./assets/images/product-2.jpg" alt="product-slider-2">
           <h4 class="slide-title">Ulin</h4>
           <p class="slide-subtitle">Ulin wood has a high density</p>
-        </div>
-        <div class="slide">
-          <img class="product-image" src="./assets/images/product-3.jpg" alt="product-slider-3">
-          <h4 class="slide-title">Bengkirai</h4>
-          <p class="slide-subtitle">Bengkirai wood has good strength and attractive color and appearance.</p>
-        </div>
-        <div class="slide">
-          <img class="product-image" src="./assets/images/product-7.jpg" alt="product-slider-3">
-          <h4 class="slide-title">Mahoni</h4>
-          <p class="slide-subtitle">has straight fibers, is resistant to
-            shrinkage, and has an attractive red
-            brownish color.</p>
         </div> -->
       </div>
   </section>
