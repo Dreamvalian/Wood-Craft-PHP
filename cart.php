@@ -1,5 +1,85 @@
 <?php
+session_start();
 include './components/Header.php';
+
+if (!isset($_SESSION['cart'])) {
+  echo '<script>alert("Your cart is empty, go to our product to shop. Happy Shopping :D");
+  window.location.href = "our-product.php";
+  </script>';
+}
+
+if (isset($_POST['add_to_cart'])) {
+  if (isset($_SESSION['cart'])) {
+    $product_array_ids = array_column($_SESSION['cart'], "product_id");
+
+    if (!in_array($_POST['product_id'], $product_array_ids)) {
+      $product_id = $_POST['product_id'];
+      $product_model = $_POST['product_model'] . " " . $_POST['product_custom_model'];
+
+      $product_array = array(
+        'product_id' => $_POST['product_id'],
+        'product_image' => $_POST['product_image'],
+        'product_name' => $_POST['product_name'],
+        'product_model' => $product_model,
+        'product_description' => $_POST['product_description'],
+        'product_price' => $_POST['product_price'],
+        'quantity' => $_POST['order_quantity']
+      );
+
+      $_SESSION['cart'][$product_id] = $product_array;
+    } else {
+      echo '<script>alert("Product was already added to the cart")</script>';
+    }
+  } else {
+    $model = $_POST['product_model'] . " " . $_POST['product_custom_model'];
+
+    $product_id = $_POST['product_id'];
+    $product_image = $_POST['product_image'];
+    $product_name = $_POST['product_name'];
+    $product_model = $model;
+    $product_description = $_POST['product_description'];
+    $product_price = $_POST['product_price'];
+    $quantity = $_POST['order_quantity'];
+
+    $product_array = array(
+      'product_id' => $_POST['product_id'],
+      'product_image' => $_POST['product_image'],
+      'product_name' => $_POST['product_name'],
+      'product_model' => $product_model,
+      'product_description' => $_POST['product_description'],
+      'product_price' => $_POST['product_price'],
+      'quantity' => $_POST['order_quantity']
+    );
+
+    $_SESSION['cart'][$product_id] = $product_array;
+  }
+
+  calculateTotalCart();
+} elseif (isset($_POST['remove_product'])) {
+  $product_id = $_POST['product_id'];
+
+  unset($_SESSION['cart'][$product_id]);
+
+  calculateTotalCart();
+}
+
+function calculateTotalCart()
+{
+  $total_price = 0;
+  $total_quantity = 0;
+
+  foreach ($_SESSION['cart'] as $key => $value) {
+    $product = $_SESSION['cart'][$key];
+    $price = $product['product_price'];
+    $quantity = $product['quantity'];
+
+    $total_price = $total_price + ($price * $quantity);
+    $total_quantity = $total_quantity + $quantity;
+  }
+
+  $_SESSION['total'] = $total_price;
+  $_SESSION['quantity'] = $quantity;
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,46 +99,67 @@ include './components/Header.php';
   <h2>Product Cart</h2>
   <section class="cart">
     <div class="cart-container">
-      <div class="cart-items">
-        <img src="product1.jpg" alt="Product 1">
-        <div class="cart-item-details">
-          <h3 class="cart-item-title">Product 1</h3>
-          <p class="cart-item-price">$19.99</p>
-        </div>
-      </div>
+      <?php if (isset($_SESSION['cart'])) { ?>
+        <?php foreach ($_SESSION['cart'] as $key => $value) { ?>
+          <div class="cart-items">
+            <img src="assets/images/<?php echo $value['product_image'] ?>" alt="<?php echo $value['product_image'] ?>">
+            <div class="cart-item-details">
+              <h3 class="cart-item-title"><?php echo $value['product_name'] ?></h3>
+              <p class="cart-item-price">Rp. <?php echo $value['product_price'] ?></p>
+              <p class="cart-item-price">Quantity: <?php echo $value['quantity'] ?></p>
+              <form method="POST" action="cart.php">
+                <td>
+                  <input type="hidden" name="product_id" value="<?php echo $value['product_id'] ?>">
+                  <button type="submit" class="btn btn-danger" name="remove_product"><i class="fa fa-trash"></i></button>
+                </td>
+              </form>
+            </div>
+          </div>
 
-      <div class="cart-items">
-        <img src="product2.jpg" alt="Product 2">
-        <div class="cart-item-details">
-          <h3 class="cart-item-title">Product 2</h3>
-          <p class="cart-item-price">$29.99</p>
-        </div>
-      </div>
+          <!-- <div class="cart-items">
+            <img src="product2.jpg" alt="Product 2">
+            <div class="cart-item-details">
+              <h3 class="cart-item-title">Product 2</h3>
+              <p class="cart-item-price">$29.99</p>
+            </div>
+          </div>
 
-      <div class="cart-items">
-        <img src="product3.jpg" alt="Product 3">
-        <div class="cart-item-details">
-          <h3 class="cart-item-title">Product 3</h3>
-          <p class="cart-item-price">$24.99</p>
-        </div>
-      </div>
+          <div class="cart-items">
+            <img src="product3.jpg" alt="Product 3">
+            <div class="cart-item-details">
+              <h3 class="cart-item-title">Product 3</h3>
+              <p class="cart-item-price">$24.99</p>
+            </div>
+          </div>
 
-      <div class="cart-items">
-        <img src="product4.jpg" alt="Product 4">
-        <div class="cart-item-details">
-          <h3 class="cart-item-title">Product 4</h3>
-          <p class="cart-item-price">$24.99</p>
-        </div>
-      </div>
+          <div class="cart-items">
+            <img src="product4.jpg" alt="Product 4">
+            <div class="cart-item-details">
+              <h3 class="cart-item-title">Product 4</h3>
+              <p class="cart-item-price">$24.99</p>
+            </div>
+          </div> -->
+        <?php } ?>
+      <?php } ?>
     </div>
     <div class="cart-summary">
       <h5>Order Summary</h5>
       <div class="cart-subtotal">
-        <h5>Sub Total:</h5>
+        <!-- <h5>Sub Total:</h5> -->
         <hr>
       </div>
-      <h5>Total:</h5>
-      <button id="add-to-cart-btn">Buy Now</button>
+
+      <h5>Total Quantity: <?php if (isset($_SESSION['cart'])) {
+                            echo $_SESSION['quantity'];
+                          } ?>
+      </h5>
+
+      <h5>Total Price: <?php if (isset($_SESSION['cart'])) {
+                          echo $_SESSION['total'];
+                        } ?>
+      </h5>
+
+      <button id="add-to-cart-btn" name="place_order">Buy Now</button>
     </div>
   </section>
 </body>

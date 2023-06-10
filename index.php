@@ -18,6 +18,7 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['user_address']);
     unset($_SESSION['member_date']);
     unset($_SESSION['user_role']);
+    unset($_SESSION['cart']);
     header('location: ./pages/login.html');
     exit;
   } else {
