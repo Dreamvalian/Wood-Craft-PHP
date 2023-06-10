@@ -19,16 +19,17 @@
 <body>
 
   <section class="hero">
+    <h2>Our results and the trust of our clients
+      speak for us.</h2>
     <div class="hero-content">
-      <h2>Our results and the trust of our clients
-        speak for us.</h2>
+      <img src="./assets/logo/logo-color-w-text.svg" alt="Logo Color">
       <p>Our clients are both private and corporate, local
         and international. Why do they work with us?
 
         It is mainly because of these three things: local
         market knowledge, global skills, and mutual trust.</p>
     </div>
-    <img src="./assets/images/workshop.png" alt="About Background Hero">
+    <img class="hero-cover" src="./assets/images/workshop.png" alt="About Background Hero">
     <div class="card">
       <p>When you start collaborating
         with us, you enter a family
