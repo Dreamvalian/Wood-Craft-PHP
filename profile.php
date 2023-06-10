@@ -19,7 +19,7 @@
   <main>
     <section class="profile">
       <div class="profile-avatar">
-        <img src="avatar.jpg" alt="User Avatar">
+        <img src="./assets/avatar.webp" alt="User Avatar">
       </div>
       <div class="profile-info">
         <h1>User Name</h1>
