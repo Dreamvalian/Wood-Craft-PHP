@@ -6,6 +6,16 @@ $query_products = "SELECT * FROM kayu";
 $stmt_products = $conn->prepare($query_products);
 $stmt_products->execute();
 $products = $stmt_products->get_result();
+
+if(isset($_GET['searchInput'])){
+    $searchData = $_GET['searchInput'];
+    $searchDataQuery = "SELECT jenis_kayu, product_price, product_description, stok, product_image from kayu
+    where jenis_kayu like '%$searchData%' OR product_price like '%$searchData%' or product_image like '%$searchData%'";
+    $stmt_kayu = $conn->prepare($searchDataQuery);
+    // $stmt_customer-> bind_param('s', $searchData);
+    $stmt_kayu->execute();
+    $kayu = $stmt_kayu->get_result();
+}
 ?>
 
 
@@ -104,7 +114,6 @@ $products = $stmt_products->get_result();
             </svg>
           </button>
           <!-- Search input -->
-          <form action="product-finder.php" method="GET">
           <div class="flex justify-center flex-1 lg:mr-32">
             <div class="relative w-full max-w-xl mr-6 focus-within:text-purple-500">
               <div class="absolute inset-y-0 flex items-center pl-2">
@@ -112,11 +121,9 @@ $products = $stmt_products->get_result();
                   <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
                 </svg>
               </div>
-              <input class="w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input" type="text" placeholder="Search for products" aria-label="Search" 
-              name="searchInput" />
+              <input class="w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input" type="text" placeholder="Search for products" aria-label="Search" />
             </div>
           </div>
-          </form>
           <ul class="flex items-center flex-shrink-0 space-x-6">
             <!-- Theme toggler -->
             <li class="flex">
@@ -223,30 +230,30 @@ $products = $stmt_products->get_result();
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                  <?php foreach ($products as $product) { ?>
+                  <?php foreach ($kayu as $kayu) { ?>
                     <tr class="text-gray-700 dark:text-gray-400">
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
                           <!-- Avatar with inset shadow -->
                           <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                            <img class="object-cover w-full h-full" src="../assets/images/<?php echo $product['product_image']; ?>" alt="" width="40px" loading="lazy" />
+                            <img class="object-cover w-full h-full" src="../assets/images/<?php echo $kayu['product_image']; ?>" alt="" width="40px" loading="lazy" />
                             <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                           </div>
                           <div>
-                            <p class="font-semibold"><?php echo $product['jenis_kayu']; ?></p>
+                            <p class="font-semibold"><?php echo $kayu['jenis_kayu']; ?></p>
                           </div>
                         </div>
                       </td>
                       <td class="px-4 py-3 text-sm">
-                        <?php echo $product['product_price']; ?>
+                        <?php echo $kayu['product_price']; ?>
                       </td>
                       <td class="px-4 py-3 text-xs">
                         <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
-                          <?php echo $product['product_description']; ?>
+                          <?php echo $kayu['product_description']; ?>
                         </span>
                       </td>
                       <td class="px-4 py-3 text-sm">
-                        <?php echo $product['stok']; ?>
+                        <?php echo $kayu['stok']; ?>
                       </td>
                     </tr>
                   <?php } ?>
