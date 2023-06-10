@@ -55,7 +55,9 @@ $products = $stmt_all_product->get_result();
         <?php while ($row = $products->fetch_assoc()) { ?>
           <div class="slide">
             <a href="product-detail.php?product_id=<?php echo $row['product_id'] ?>">
-              <img class="product-image" src="./assets/images/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_image']; ?>">
+              <a href="./product-detail.php?">
+                <img class="product-image" src="./assets/images/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_image']; ?>">
+              </a>
             </a>
             <h4 class="slide-title"><?php echo $row['jenis_kayu']; ?></h4>
             <p class="slide-subtitle"><?php echo $row['product_description']; ?></p>
@@ -65,18 +67,6 @@ $products = $stmt_all_product->get_result();
           <img class="product-image" src="./assets/images/product-2.jpg" alt="product-slider-2">
           <h4 class="slide-title">Ulin</h4>
           <p class="slide-subtitle">Ulin wood has a high density</p>
-        </div>
-        <div class="slide">
-          <img class="product-image" src="./assets/images/product-3.jpg" alt="product-slider-3">
-          <h4 class="slide-title">Bengkirai</h4>
-          <p class="slide-subtitle">Bengkirai wood has good strength and attractive color and appearance.</p>
-        </div>
-        <div class="slide">
-          <img class="product-image" src="./assets/images/product-7.jpg" alt="product-slider-3">
-          <h4 class="slide-title">Mahoni</h4>
-          <p class="slide-subtitle">has straight fibers, is resistant to
-            shrinkage, and has an attractive red
-            brownish color.</p>
         </div> -->
       </div>
   </section>

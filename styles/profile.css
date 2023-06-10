@@ -13,7 +13,7 @@
 .profile {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
+  padding-top: 5rem;
 }
 
 .profile-avatar img {
@@ -30,7 +30,7 @@
 }
 
 .transaction-history {
-  margin-bottom: 2.5rem;
+  margin: 2rem;
 }
 
 .transaction-history h2 {
