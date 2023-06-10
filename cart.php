@@ -1,5 +1,5 @@
 <?php
-@include('./components/Header.php')
+include './components/Header.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,9 +9,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/cart.css" />
   <link rel="stylesheet" href="./styles/components/header.css" />
   <link rel="stylesheet" href="/dist/output.css">
+  <link rel="stylesheet" href="./styles/cart.css" />
   <title>Woodcraft - Cart</title>
 </head>
 
@@ -54,10 +54,10 @@
     <div class="cart-summary">
       <h5>Order Summary</h5>
       <div class="cart-subtotal">
-        <h5>Sub Total: </h5>
+        <h5>Sub Total:</h5>
         <hr>
       </div>
-      <h5>Total: </h5>
+      <h5>Total:</h5>
       <button id="add-to-cart-btn">Buy Now</button>
     </div>
   </section>

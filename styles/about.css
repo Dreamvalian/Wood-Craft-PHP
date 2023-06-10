@@ -1,0 +1,33 @@
+@import url("variable.css");
+
+.hero {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h2 {
+  font-family: var(--font-stack-heading);
+}
+
+.hero .hero-content {
+  padding-top: 2rem;
+}
+
+.hero .hero-content h2 {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.hero .hero-content p {
+  font-family: var(--font-stack-body);
+  width: 30%;
+  border-left: 1px solid var(--black);
+  padding: 1rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
