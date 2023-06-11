@@ -110,7 +110,7 @@ if (empty($_SESSION['cart'])) {
               <form method="POST" action="cart.php">
                 <td>
                   <input type="hidden" name="product_id" value="<?php echo $value['product_id'] ?>">
-                  <button type="submit" class="btn btn-danger" name="remove_product"><i class="fa fa-trash"></i></button>
+                  <button type="submit" class="button" name="remove_product"><i class="fa fa-trash">Buy Now</i></button>
                 </td>
               </form>
             </div>
@@ -146,13 +146,14 @@ if (empty($_SESSION['cart'])) {
       <h5>Order Summary</h5>
       <div class="cart-subtotal">
         <!-- <h5>Sub Total:</h5> -->
-        <hr>
       </div>
 
-      <h5>Total Quantity: <?php if (isset($_SESSION['cart'])) {
+      <p>Total Quantity: <?php if (isset($_SESSION['cart'])) {
                             echo $_SESSION['quantity'];
                           } ?>
-      </h5>
+      </p>
+      <hr>
+
 
       <h5>Total Price: <?php if (isset($_SESSION['cart'])) {
                           echo "Rp. " . $_SESSION['total'];

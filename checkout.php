@@ -23,6 +23,11 @@ if (empty($_SESSION['cart'])) {
 </head>
 
 <body>
+  <div class="breadcrumb">
+    <a href="home.php">Home</a> >
+    <a href="cart.php">Cart</a> >
+    <span>Checkout</span>
+  </div>
   <section class="checkout">
     <form action="actions/place_order.php" method="post">
       <label for="name">Name</label>

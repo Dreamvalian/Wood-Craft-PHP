@@ -57,30 +57,34 @@ body h2 {
 }
 
 .cart .cart-summary {
-  margin-top: 2rem;
   background-color: var(--white);
   padding: 2rem;
   border-radius: 0.4rem;
   box-shadow: var(--box-shadow);
 }
 
-.cart .cart-summary .cart-subtotal {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-bottom: 1rem;
+.cart .cart-summary h5 {
+  font-family: var(--font-stack-heading);
 }
 
-.cart .cart-summary button#add-to-cart-btn {
+hr {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid var(--grey);
+}
+
+button {
+  background-color: var(--tertiary-color);
+  color: var(--white);
+  padding: 8px 32px 8px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
   background-color: var(--primary-color);
   color: var(--white);
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 0.4rem;
-  font-family: var(--font-stack-body);
-  cursor: pointer;
-}
-
-.cart .cart-summary button#add-to-cart-btn:hover {
-  background-color: var(--secondary-color);
 }

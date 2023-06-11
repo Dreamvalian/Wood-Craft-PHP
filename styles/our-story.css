@@ -1,0 +1,52 @@
+@import url("variable.css");
+
+body {
+  font-family: var(--font-stack-body);
+  margin: 0;
+  padding: 0;
+}
+
+.story {
+  padding-top: 6rem;
+  margin: 0 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.story h2 {
+  font-family: var(--font-stack-heading);
+  margin-bottom: 2rem;
+}
+
+.story p {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  padding: 0 8rem 2rem 8rem;
+}
+
+.story .team-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.story .team-profile p {
+  padding: 2rem;
+}
+
+.story .team-profile .team-member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.story .team-profile .team-member img {
+  width: 256px;
+  height: 256px;
+  object-fit: cover;
+
+}
