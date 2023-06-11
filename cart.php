@@ -27,6 +27,10 @@ if (isset($_POST['add_to_cart'])) {
   } else {
     $model = $_POST['product_model'] . " " . $_POST['product_custom_model'];
 
+    if (strlen(trim($string)) < 1) {
+      $model = 'Kayu mentah';
+    }
+
     $product_id = $_POST['product_id'];
     $product_image = $_POST['product_image'];
     $product_name = $_POST['product_name'];
@@ -115,30 +119,6 @@ if (empty($_SESSION['cart'])) {
               </form>
             </div>
           </div>
-
-          <!-- <div class="cart-items">
-            <img src="product2.jpg" alt="Product 2">
-            <div class="cart-item-details">
-              <h3 class="cart-item-title">Product 2</h3>
-              <p class="cart-item-price">$29.99</p>
-            </div>
-          </div>
-
-          <div class="cart-items">
-            <img src="product3.jpg" alt="Product 3">
-            <div class="cart-item-details">
-              <h3 class="cart-item-title">Product 3</h3>
-              <p class="cart-item-price">$24.99</p>
-            </div>
-          </div>
-
-          <div class="cart-items">
-            <img src="product4.jpg" alt="Product 4">
-            <div class="cart-item-details">
-              <h3 class="cart-item-title">Product 4</h3>
-              <p class="cart-item-price">$24.99</p>
-            </div>
-          </div> -->
         <?php } ?>
       <?php } ?>
     </div>
