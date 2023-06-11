@@ -16,20 +16,35 @@
 </head>
 
 <body>
+  <div class="breadcrumb">
+    <a href="home.php">Home</a> >
+    <a href="cart.php">Cart</a> >
+    <span>Checkout</span>
+  </div>
   <section class="checkout">
     <form action="input">
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name">
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email">
-      <label for="address">Address</label>
-      <input type="text" name="address" id="address">
-      <label for="phone">Phone</label>
-      <input type="text" name="phone" id="phone">
+      <div class="checkout-name">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+      </div>
+      <div class="checkout-grid">
+        <div class="checkout-email">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email">
+        </div>
+        <div class="checkout-phone">
+          <label for="phone">Phone</label>
+          <input type="text" name="phone" id="phone">
+        </div>
+      </div>
+      <div class="checkout-address">
+        <label for="address">Address</label>
+        <textarea type="text" name="address" id="address" cols="30" rows="10"></textarea>
+      </div>
     </form>
     <div class="place-order-card">
-      <span>Product</span>
-      <span>Price</span>
+      <h5>Product</h5>
+      <span>Price: </span>
       <hr>
       <span>Total: </span>
       <button type="submit">Place Order</button>
