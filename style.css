@@ -1,11 +1,10 @@
 @import url(../variable.css);
 
-
 /* Hero */
 
 .hero {
   display: flex;
-  padding-top: 4rem;
+  padding-top: 2.85rem;
 }
 
 .hero .left-hero {
@@ -24,6 +23,13 @@
   padding: 8px 32px 8px 32px;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero .left-hero button:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
 }
 
 .hero .right-hero {
@@ -41,39 +47,88 @@
   border-top-left-radius: 10rem;
 }
 
-/* Testimony */
+/* Link To */
 
-.Testimony {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Familjen Grotesk", sans-serif;
-}
-
-.Testimony h2 {
-  font-family: "Playfair Display", serif;
-}
-
-.Testimony .testimony-container {
-  overflow: hidden;
-  padding-top: 2rem;
-}
-
-.Testimony .testimony-container h3 {
-  border-left: 3px solid var(--black);
-  padding-left: 2rem;
-}
-
-.Testimony .testimony-container .testimony-content {
-  white-space: nowrap;
-  animation: marquee 60s linear infinite;
+.link-to {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 2rem;
-  padding-bottom: 2rem;
 }
+
+.link-to h3 {
+  font-family: "Playfair Display", serif;
+}
+
+.link-to-forest,
+.link-to-workshop,
+.link-to-testimony {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+
+
+/* Forest */
+
+.forest {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('./assets/images/forest-wood-craft-2.jpg');
+  color: var(--white);
+  margin-top: 2rem;
+}
+
+.forest .forest-container {
+  padding: 4rem;
+  background-color: rgba(10, 10, 10, 0.4);
+  /* Add an overlay for better readability */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 2rem;
+}
+
+.forest .forest-container h1 {
+  font-family: "Playfair Display", serif;
+}
+
+.forest-container .about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-about {
+  flex: 1;
+  overflow: hidden;
+}
+
+.img-about:hover {
+  flex: 2.25;
+}
+
+.img-about:hover> :not(:hover) {
+  opacity: .4;
+}
+
+.img-about img {
+  object-fit: cover;
+  filter: grayscale(1);
+  width: 512px;
+  height: 356px;
+  transition: 2s;
+
+}
+
+.img-about:hover img {
+  filter: none;
+}
+
 
 
 /* Workshop */
@@ -99,12 +154,51 @@
 }
 
 .workshop .left-workshop .hero-image {
-  margin-top: 2rem;
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
   border-bottom-right-radius: 10rem;
+}
+
+/* Testimony */
+
+.Testimony {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  font-family: var(--font-stack-heading);
+}
+
+.testimony-container {
+  display: flex;
+  font-family: var(--font-stack-body);
+}
+
+.testimony-card {
+  background-color: var(--white);
+  border-radius: 5px;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimony-card p {
+  font-size: 1rem;
+  color: var(--grey);
+  margin-bottom: 2rem;
+}
+
+.testimony-card .name {
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: var(grey);
 }
 
 /*# sourceMappingURL=home.css.map */

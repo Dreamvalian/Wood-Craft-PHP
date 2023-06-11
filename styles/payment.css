@@ -1,0 +1,73 @@
+@import url("variable.css");
+
+body {
+  font-family: var(--font-stack-body);
+  margin: 0;
+  padding: 0;
+  background-image: url(./assets/images/background-payment.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.breadcrumb {
+  padding: 6rem 2rem 2rem 2rem;
+}
+
+.breadcrumb a {
+  color: var(--grey);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--secondary-color);
+}
+
+.breadcrumb span {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.breadcrumb::after {
+  content: ">";
+  margin: 0 5px;
+  color: var(--grey);
+}
+
+.breadcrumb::after:last-child {
+  content: none;
+}
+
+.payment {
+  text-align: center;
+  padding: 6rem 2rem 2rem 2rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.payment .payment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 35%;
+  margin-left: 2rem;
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: 0.4rem;
+  box-shadow: var(--box-shadow);
+}
