@@ -22,10 +22,10 @@
     </ul>
     <ul>
       <li>
-        <a href="#" class="footer-item">Our Story</a>
+        <a href="our-story.php" class="footer-item">Our Story</a>
       </li>
       <li>
-        <a href="#" class="footer-item">Our Location</a>
+        <a href="map.php" class="footer-item">Our Location</a>
       </li>
       <li>
         <a href="#" class="footer-item">News</a>
@@ -36,16 +36,27 @@
     </ul>
     <ul>
       <li>
-        <a href="#" class="footer-item">Instagram</a>
+        <a href="our-product.php" class="footer-item">Our Product</a>
       </li>
       <li>
-        <a href="#" class="footer-item">Facebook</a>
+        <a href="about.php" class="footer-item">About Us</a>
       </li>
       <li>
-        <a href="#" class="footer-item">Twitter</a>
+        <a href="contact.php" class="footer-item">Contact</a>
+      </li>
+    </ul>
+    <ul class="social">
+      <li>
+        <a href="http://">Fb</a>
       </li>
       <li>
-        <a href="#" class="footer-item">Whatsapp</a>
+        <a href="http://">Tw</a>
+      </li>
+      <li>
+        <a href="http://">Ig</a>
+      </li>
+      <li>
+        <a href="http://">Wa</a>
       </li>
     </ul>
   </div>

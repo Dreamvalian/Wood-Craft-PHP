@@ -1,0 +1,106 @@
+@import url("variable.css");
+
+body {
+  font-family: var(--font-stack-body);
+  text-align: center;
+}
+
+body h2 {
+  padding-top: 5rem;
+  font-family: var(--font-stack-heading);
+}
+
+.cart {
+  padding-top: 4rem;
+  background-color: var(--white);
+  color: var(--tertiary-color);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart .cart-container {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.cart .cart-container .cart-items {
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: var(--box-shadow);
+}
+
+.cart .cart-container .cart-items button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 8px 32px 8px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cart .cart-container .cart-items button:hover {
+  background-color: var(--tertiary-color);
+  color: var(--white);
+}
+
+.cart .cart-container .cart-items img {
+  width: 10rem;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.cart .cart-container .cart-items .cart-item-details {
+  flex-grow: 1;
+}
+
+.cart .cart-container .cart-items .cart-item-details .cart-item-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cart .cart-container .cart-items .cart-item-details .cart-item-price {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.cart .cart-summary {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 0.4rem;
+  box-shadow: var(--box-shadow);
+}
+
+.cart .cart-summary h5 {
+  font-family: var(--font-stack-heading);
+}
+
+hr {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid var(--grey);
+}
+
+.cart .cart-summary button {
+  background-color: var(--tertiary-color);
+  color: var(--white);
+  padding: 8px 32px 8px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cart .cart-summary button:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
