@@ -28,7 +28,7 @@ $sum = $stmt_sum->get_result()->fetch_assoc();
 $customerSum = $sum['customer_sum'];
 
 //for new customers
-$new_customer = "SELECT COUNT(user_id) as new_customer from user";
+$new_customer = "SELECT COUNT(user_id) as new_customer from user WHERE role like '%customer%'";
 $stmt_new_customer = $conn->prepare($new_customer);
 $stmt_new_customer->execute();
 $new = $stmt_new_customer->get_result()->fetch_assoc();

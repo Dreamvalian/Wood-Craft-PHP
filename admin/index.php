@@ -1,25 +1,28 @@
 <?php
+
+session_start();
 @include('../server/connection.php');
 
-// if (!isset($_SESSION['logged_in'])) {
-//   header('location: ../pages/login-admin.html');
-//   exit;
-// }
+if (!isset($_SESSION['logged_in'])) {
+  header('location: ../pages/login.html');
+  exit;
+}
 
-// if (isset($_GET['logout'])) {
-//   if (isset($_SESSION['logged_in'])) {
-//     unset($_SESSION['logged_in']);
-//     unset($_SESSION['admin_id']);
-//     unset($_SESSION['admin_name']);
-//     unset($_SESSION['password']);
-//     unset($_SESSION['email']);
-//     unset($_SESSION['rolerole']);
-//     header('location: ../pages/login-admin.html');
-//     exit;
-//   } else {
-//     echo "Session logged_in tidak ditemukan.";
-//   }
-// }
+if (isset($_GET['logout'])) {
+  if (isset($_SESSION['logged_in'])) {
+    unset($_SESSION['logged_in']);
+    unset($_SESSION['user_id']);
+    unset($_SESSION['user_name']);
+    unset($_SESSION['user_email']);
+    unset($_SESSION['user_address']);
+    unset($_SESSION['member_date']);
+    unset($_SESSION['user_role']);
+    header('location: ../pages/login.html');
+    exit;
+  } else {
+    echo "Session logged_in tidak ditemukan.";
+  }
+}
 
 $query_customer = "SELECT username, grandtotal, payment_status, payment_date from user inner join
 pemesanan on user.user_id = pemesanan.user_id";
@@ -44,7 +47,7 @@ $sum = $stmt_sum->get_result()->fetch_assoc();
 $customerSum = $sum['customer_sum'];
 
 //for new customers
-$new_customer = "SELECT COUNT(user_id) as new_customer from user";
+$new_customer = "SELECT COUNT(user_id) as new_customer from user WHERE role like '%customer%'";
 $stmt_new_customer = $conn->prepare($new_customer);
 $stmt_new_customer->execute();
 $new = $stmt_new_customer->get_result()->fetch_assoc();
