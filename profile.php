@@ -39,6 +39,7 @@
             <th>Date</th>
             <th>Description</th>
             <th>Amount</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
@@ -46,11 +47,13 @@
             <td>May 10, 2023</td>
             <td>Payment for item A</td>
             <td>$50.00</td>
+            <td>Paid</td>
           </tr>
           <tr>
             <td>April 25, 2023</td>
             <td>Payment for item B</td>
             <td>$30.00</td>
+            <td>Unpaid</td>
           </tr>
         </tbody>
       </table>

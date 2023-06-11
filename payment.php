@@ -19,8 +19,8 @@
   <section class="payment">
     <h5>Total Payment</h5>
     <hr>
-    <button>Paypal</button>
-    <button>Debit or Credit Card</button>
+    <button type="submit">Paypal</button>
+    <button type="submit">Debit or Credit Card</button>
   </section>
 </body>
 

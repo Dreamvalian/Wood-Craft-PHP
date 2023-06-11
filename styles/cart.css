@@ -71,16 +71,19 @@ body h2 {
   margin-bottom: 1rem;
 }
 
-.cart .cart-summary button#add-to-cart-btn {
-  background-color: var(--primary-color);
+button {
+  display: flex;
+  background-color: var(--tertiary-color);
   color: var(--white);
-  padding: 1rem 2rem;
+  padding: 8px 32px 8px 32px;
   border: none;
-  border-radius: 0.4rem;
-  font-family: var(--font-stack-body);
+  border-radius: 8px;
   cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.cart .cart-summary button#add-to-cart-btn:hover {
-  background-color: var(--secondary-color);
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
 }

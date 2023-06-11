@@ -16,10 +16,10 @@
 }
 
 .card-container {
-  width: 80%;
+  width: 60%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   background-color: var(--white);
   padding: 1rem;
   border-radius: 0.4rem;
@@ -34,29 +34,66 @@
   font-family: var(--font-stack-heading);
 }
 
-.contact-form label {
-  display: block;
+label {
+  display: flex;
+  justify-content: start;
 }
 
 .contact-form input[type="email"],
-.contact-form textarea {
+.contact-form input[type="text"],
+.contact-message textarea {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid var(--grey);
   border-radius: 5px;
+  gap: 1rem;
+  display: flex;
+  margin-bottom: 1rem;
 }
 
 button {
+  display: flex;
   background-color: var(--tertiary-color);
   color: var(--white);
   padding: 8px 32px 8px 32px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
   background-color: var(--primary-color);
   color: var(--white);
+}
+
+.contact-social {
+  margin-left: 2rem;
+  border-left: 1px solid var(--black);
+}
+
+.contact-location {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-email {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-phone {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-social i {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 2rem;
 }
