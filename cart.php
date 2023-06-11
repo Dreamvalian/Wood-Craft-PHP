@@ -8,7 +8,19 @@ if (isset($_POST['add_to_cart'])) {
 
     if (!in_array($_POST['product_id'], $product_array_ids)) {
       $product_id = $_POST['product_id'];
-      $product_model = $_POST['product_model'] . " " . $_POST['product_custom_model'];
+
+      if (isset($_POST['product_model']) && isset($_POST['product_custom_model'])) {
+        $product_model = $_POST['product_model'] . " " . $_POST['product_custom_model'];
+      } else if (isset($_POST['product_custom_model']) && !isset($_POST['product_model'])) {
+        $product_model = $_POST['product_custom_model'];
+
+        if (strlen(trim($product_model)) < 1) {
+          $product_model = 'Kayu mentah';
+        }
+      } else {
+        $product_model = 'Kayu Mentah';
+      }
+
 
       $product_array = array(
         'product_id' => $_POST['product_id'],
@@ -25,10 +37,16 @@ if (isset($_POST['add_to_cart'])) {
       echo '<script>alert("Product was already added to the cart")</script>';
     }
   } else {
-    $model = $_POST['product_model'] . " " . $_POST['product_custom_model'];
+    if (isset($_POST['product_model']) && isset($_POST['product_custom_model'])) {
+      $product_model = $_POST['product_model'] . " " . $_POST['product_custom_model'];
+    } else if (isset($_POST['product_custom_model']) && !isset($_POST['product_model'])) {
+      $product_model = $_POST['product_custom_model'];
 
-    if (strlen(trim($string)) < 1) {
-      $model = 'Kayu mentah';
+      if (strlen(trim($product_model)) < 1) {
+        $product_model = 'Kayu mentah';
+      }
+    } else {
+      $product_model = 'Kayu Mentah';
     }
 
     $product_id = $_POST['product_id'];
