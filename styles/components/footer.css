@@ -10,7 +10,7 @@
 }
 
 .footer .left-container {
-  max-width: 960px;
+  width: 40%;
   margin: auto;
   padding-bottom: 1rem;
   display: flex;
@@ -25,12 +25,12 @@
 }
 
 .footer .right-container {
+  width: 60%;
   background-color: var(--tertiary-color);
   border-top-left-radius: 8rem;
   color: var(--white);
   display: flex;
-  justify-content: start;
-  align-items: center;
+  justify-content: center;
   gap: 8rem;
   padding: 2rem;
 }
@@ -49,6 +49,14 @@
 .footer .right-container ul li a {
   color: var(--white);
   text-decoration: none;
+}
+
+.footer .right-container .social {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--grey);
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=footer.css.map */

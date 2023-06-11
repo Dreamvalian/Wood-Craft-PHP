@@ -57,22 +57,23 @@ body h2 {
 }
 
 .cart .cart-summary {
-  margin-top: 2rem;
   background-color: var(--white);
   padding: 2rem;
   border-radius: 0.4rem;
   box-shadow: var(--box-shadow);
 }
 
-.cart .cart-summary .cart-subtotal {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-bottom: 1rem;
+.cart .cart-summary h5 {
+  font-family: var(--font-stack-heading);
+}
+
+hr {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid var(--grey);
 }
 
 button {
-  display: flex;
   background-color: var(--tertiary-color);
   color: var(--white);
   padding: 8px 32px 8px 32px;
