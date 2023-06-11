@@ -19,7 +19,7 @@
 <body>
   <div class="breadcrumb">
     <a href="home.php">Home</a> >
-    <a href="cart.php">Profile</a> >
+    <a href="profile.php">Profile</a> >
     <span>order Detail</span>
   </div>
   <section class="order-detail">
