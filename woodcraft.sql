@@ -1,11 +1,12 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2023 at 05:45 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 7.4.30
+
+-- Generation Time: Jun 10, 2023 at 09:04 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -67,7 +68,11 @@ CREATE TABLE `item_pesanan` (
 --
 
 INSERT INTO `item_pesanan` (`item_id`, `order_id`, `user_id`, `product_id`, `product_name`, `product_image`, `product_model`, `product_price`, `quantity`, `order_date`) VALUES
-('IT1', 'OD1', 'U2', 'P02', 'Kayu Jati', 'product-2.jpg', 'Meja Makan', 67000, 2, '2023-06-08');
+('IT1', 'OD1', 'U2', 'P02', 'Kayu Jati', 'product-2.jpg', 'Meja Makan', 67000, 2, '2023-06-08'),
+('IT2', 'OD1', 'U2', 'P02', 'Kayu Jati', 'product-2.jpg', 'Meja Makan', 67000, 2, '2023-06-08'),
+('IT3', 'OD2', 'U2', 'P01', 'Joseph', 'product-1.jpg', '1 pcs Lemari 2 pintu ', 30000000, 2, '2023-06-10'),
+('IT4', 'OD3', 'U2', 'P02', 'Kayu Jati', 'product-2.jpg', '1 pcs Lemari 2 pintu ', 67000, 3, '2023-06-10'),
+('IT5', 'OD3', 'U2', 'P03', 'Kayu Jepara', 'product-3.jpg', '1 pcs Lemari 2 pintu ', 3400000, 1, '2023-06-10');
 
 -- --------------------------------------------------------
 
@@ -89,10 +94,10 @@ CREATE TABLE `kayu` (
 --
 
 INSERT INTO `kayu` (`product_id`, `jenis_kayu`, `product_price`, `product_description`, `stok`, `product_image`) VALUES
-('P01', 'Joseph', 30000000, 'BURUUUU', 23, 'product-10.jpeg'),
+('P01', 'Joseph', 30000000, 'BURUUUU', 23, 'product-1.jpg'),
 ('P02', 'Kayu Jati', 67000, 'naonweh', 30, 'product-2.jpg'),
 ('P03', 'Kayu Jepara', 3400000, 'Kayu pilihan asal jepara', 34, 'product-3.jpg'),
-('P05', 'Kayu Malang', 55000, 'PPPPPPP', 45, 'product-10.jpeg');
+('P05', 'Kayu Malang', 55000, 'PPPPPPP', 45, 'product-4.jpg');
 
 -- --------------------------------------------------------
 
@@ -103,8 +108,11 @@ INSERT INTO `kayu` (`product_id`, `jenis_kayu`, `product_price`, `product_descri
 CREATE TABLE `pemesanan` (
   `order_id` varchar(100) NOT NULL,
   `user_id` varchar(100) DEFAULT NULL,
+  `user_name` varchar(30) NOT NULL,
+  `user_address` varchar(50) NOT NULL,
+  `user_phone` varchar(15) NOT NULL,
   `grandtotal` double DEFAULT NULL,
-  `payment_date` date DEFAULT NULL,
+  `order_date` date DEFAULT NULL,
   `payment_status` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -112,8 +120,10 @@ CREATE TABLE `pemesanan` (
 -- Dumping data for table `pemesanan`
 --
 
-INSERT INTO `pemesanan` (`order_id`, `user_id`, `grandtotal`, `payment_date`, `payment_status`) VALUES
-('OD1', 'U2', 134000, '2023-06-16', 'Unpaid');
+INSERT INTO `pemesanan` (`order_id`, `user_id`, `user_name`, `user_address`, `user_phone`, `grandtotal`, `order_date`, `payment_status`) VALUES
+('OD1', 'U2', '', '', '', 134000, '2023-06-16', 'Unpaid'),
+('OD2', 'U2', 'Hadiansyah Rabbani', 'Cigondewah Kidul', '0876123144', 60000000, '2023-06-10', 'Unpaid'),
+('OD3', 'U2', 'Micel lele', 'Dago pakar', '098124145', 3601000, '2023-06-10', 'Unpaid');
 
 -- --------------------------------------------------------
 

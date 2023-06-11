@@ -2,12 +2,6 @@
 session_start();
 include './components/Header.php';
 
-if (!isset($_SESSION['cart'])) {
-  echo '<script>alert("Your cart is empty, go to our product to shop. Happy Shopping :D");
-  window.location.href = "our-product.php";
-  </script>';
-}
-
 if (isset($_POST['add_to_cart'])) {
   if (isset($_SESSION['cart'])) {
     $product_array_ids = array_column($_SESSION['cart'], "product_id");
@@ -78,7 +72,13 @@ function calculateTotalCart()
   }
 
   $_SESSION['total'] = $total_price;
-  $_SESSION['quantity'] = $quantity;
+  $_SESSION['quantity'] = $total_quantity;
+}
+
+if (empty($_SESSION['cart'])) {
+  echo '<script>alert("Your cart is empty, go to our product to shop. Happy Shopping :D");
+  window.location.href = "our-product.php";
+  </script>';
 }
 ?>
 
@@ -154,12 +154,14 @@ function calculateTotalCart()
       </p>
       <hr>
 
-      <p>Total Price: <?php if (isset($_SESSION['cart'])) {
-                        echo $_SESSION['total'];
-                      } ?>
-      </p>
 
-      <button id="add-to-cart-btn" name="place_order">Buy Now</button>
+      <h5>Total Price: <?php if (isset($_SESSION['cart'])) {
+                          echo "Rp. " . $_SESSION['total'];
+                        } ?>
+      </h5>
+      <form action="checkout.php" method="post">
+        <button id="add-to-cart-btn" name="checkout">Buy Now</button>
+      </form>
     </div>
   </section>
 </body>

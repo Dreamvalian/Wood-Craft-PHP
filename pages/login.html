@@ -1,41 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Woodcraft - Login/Register</title>
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Woodcraft - Login/Register</title>
-  <link rel="stylesheet" href="../styles/login.css" />
-</head>
+  <body>
+    <div class="container">
+      <form
+        id="loginForm"
+        class="form"
+        method="post"
+        action="../actions/login.php"
+      >
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" name="username" required />
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          required
+        />
+        <button type="submit" name="btn_login">Log in</button>
+        <p class="register-link">
+          Don't have an account? <a href="#" id="registerLink">Register</a>
+        </p>
+      </form>
 
-<body>
-  <div class="container">
-    <form id="loginForm" class="form" method="post" action="../actions/login-admin.php">
-      <h2>Login</h2>
-      <input type="text" placeholder="Username" name="username" required />
-      <input type="password" placeholder="Password" name="password" required />
-      <button type="submit" name="btn_login">Log in</button>
-      <p class="register-link">
-        Don't have an account? <a href="#" id="registerLink">Register</a>
-      </p>
-    </form>
+      <form
+        id="registerForm"
+        class="form"
+        style="display: none"
+        method="post"
+        action="../actions/register.php"
+      >
+        <h2>Register</h2>
+        <input
+          type="text"
+          placeholder="Username"
+          name="username_reg"
+          required
+        />
+        <input type="email" placeholder="Email" name="email" required />
+        <input
+          type="password"
+          id="passwordInput"
+          placeholder="Password"
+          name="password_reg"
+          required
+        />
+        <input
+          type="password"
+          id="confirmPasswordInput"
+          placeholder="Confirm Password"
+          name="confirm_password"
+          required
+        />
+        <input type="text" placeholder="Address" name="address" required />
+        <button type="submit" name="btn_register">Register</button>
+        <p class="login-link">
+          Already have an account? <a href="#" id="loginLink">Login</a>
+        </p>
+      </form>
+    </div>
 
-    <form id="registerForm" class="form" style="display: none" method="post" action="../actions/register.php">
-      <h2>Register</h2>
-      <input type="text" placeholder="Username" name="username_reg" required />
-      <input type="email" placeholder="Email" name="email" required />
-      <input type="password" id="passwordInput" placeholder="Password" name="password_reg" required />
-      <input type="password" id="confirmPasswordInput" placeholder="Confirm Password" name="confirm_password"
-        required />
-      <input type="text" placeholder="Address" name="address" required />
-      <button type="submit" name="btn_register">Register</button>
-      <p class="login-link">
-        Already have an account? <a href="#" id="loginLink">Login</a>
-      </p>
-    </form>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
