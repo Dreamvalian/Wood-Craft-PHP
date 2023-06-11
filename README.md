@@ -251,7 +251,7 @@ Project Link: [https://github.com/Dreamvalian/WoodCraftProject](https://github.c
 [license-url]: https://github.com/Dreamvalian/WoodCraftProject/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/hanifnugraha
-[product-screenshot]: /img/screenshot.png
+[product-screenshot]: /assets/cover-1.png
 [developer.mozilla.org/en-us/docs/web/html]: https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white
 [html-url]: Developer.mozilla.org/en-US/docs/Web/HTML
 [bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white

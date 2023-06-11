@@ -1,0 +1,99 @@
+@import url(variable.css);
+
+.contact {
+  padding-top: 4rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0 2rem 0;
+  background: url(../assets/images/background-contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-container {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: var(--box-shadow);
+}
+
+.contact-heading {
+  text-align: center;
+}
+
+.contact-heading h2 {
+  font-family: var(--font-stack-heading);
+}
+
+label {
+  display: flex;
+  justify-content: start;
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-message textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  gap: 1rem;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+button {
+  display: flex;
+  background-color: var(--tertiary-color);
+  color: var(--white);
+  padding: 8px 32px 8px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.contact-social {
+  margin-left: 2rem;
+  border-left: 1px solid var(--black);
+}
+
+.contact-location {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-email {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-phone {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-social i {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 2rem;
+}

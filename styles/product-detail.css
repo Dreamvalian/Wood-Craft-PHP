@@ -40,7 +40,23 @@
 }
 
 .product-model {
-  display: none;
+  display: flex;
+  gap: 2rem;
+}
+
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type=radio]+img {
+  cursor: pointer;
+}
+
+[type=radio]:checked+img {
+  outline: 2px solid var(--primary-color);
 }
 
 .product-custom {
@@ -55,13 +71,8 @@
 
 .add-to-cart {
   background-color: var(--white);
-  border: 1px solid var(--tertiary-color);
-  border-radius: 4px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  padding: 2rem;
+  border-radius: 0.4rem;
   box-shadow: var(--box-shadow);
 }
 

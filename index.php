@@ -18,6 +18,7 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['user_address']);
     unset($_SESSION['member_date']);
     unset($_SESSION['user_role']);
+    unset($_SESSION['cart']);
     header('location: ./pages/login.html');
     exit;
   } else {
@@ -35,7 +36,7 @@ if (isset($_GET['logout'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="/dist/output.css">
-  <title>Home</title>
+  <title>Woodcraft</title>
 </head>
 
 <body>
@@ -57,10 +58,9 @@ if (isset($_GET['logout'])) {
         </a>
       </div>
 
-      <div class="right-hero">
-        <figure>
+      <div class="right-hero carousel">
+        <figure class="right-hero-wrapper">
           <img src="./assets/images/wood-1.png" alt="hero-content-1" class="hero-image" />
-        </figure>
       </div>
     </section>
 
