@@ -16,18 +16,26 @@ session_start();
 </head>
 
 <body>
+  <div class="breadcrumb">
+    <a href="home.php">Home</a> >
+    <a href="cart.php">Cart</a> >
+    <a href="checkout.php">Checkout</a> >
+    <span>Payment</span>
+  </div>
   <section class="payment">
-    <?php if (isset($_SESSION['total']) && $_SESSION['total'] != 0) {
-      $amount = strval(number_format($_SESSION['total'] / 15502, 2, '.', ''));
-      $order_id = $_SESSION['order_id'];
-    ?>
-      <h5>Total Payment <?php echo "Rp. " . $_SESSION['total']; ?></h5>
-      <hr>
-      <div id="paypal-button-container"></div>
-    <?php } else { ?>
-      <h5>You Don't Have Any Order</h5>
-      <hr>
-    <?php } ?>
+    <div class="payment-container">
+      <?php if (isset($_SESSION['total']) && $_SESSION['total'] != 0) {
+        $amount = strval(number_format($_SESSION['total'] / 15502, 2, '.', ''));
+        $order_id = $_SESSION['order_id'];
+      ?>
+        <p>Total Payment <?php echo "Rp. " . $_SESSION['total']; ?></p>
+        <hr>
+        <div id="paypal-button-container"></div>
+      <?php } else { ?>
+        <p>You Don't Have Any Order</p>
+        <hr>
+      <?php } ?>
+    </div>
   </section>
   <script src="https://www.paypal.com/sdk/js?client-id=AZc7gISngCVfWIqTNzlMZRSCsd7cte4sTB4ZrK7JEJHUGO9CEALMKj4mzo5ZIe2i6DRAiOhJouUWqxXF&currency=USD"></script>
 

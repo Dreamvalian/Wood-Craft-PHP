@@ -11,7 +11,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/profile.css">
-  <link rel="stylesheet" href="./dist/output.css">
   <title>User Profile</title>
 </head>
 
@@ -40,6 +39,7 @@
             <th>Description</th>
             <th>Amount</th>
             <th>Status</th>
+            <th>Detail</th>
           </tr>
         </thead>
         <tbody>
@@ -48,12 +48,14 @@
             <td>Payment for item A</td>
             <td>$50.00</td>
             <td>Paid</td>
+            <td><a href="./order-detail.php"><button type="submit" name="detail">Details</button></a></td>
           </tr>
           <tr>
             <td>April 25, 2023</td>
             <td>Payment for item B</td>
             <td>$30.00</td>
             <td>Unpaid</td>
+            <td><a href="./order-detail.php"><button type="submit" name="detail">Details</button></a></td>
           </tr>
         </tbody>
       </table>

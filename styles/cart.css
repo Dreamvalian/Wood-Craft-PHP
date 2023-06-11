@@ -36,6 +36,22 @@ body h2 {
   box-shadow: var(--box-shadow);
 }
 
+.cart .cart-container .cart-items button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 8px 32px 8px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cart .cart-container .cart-items button:hover {
+  background-color: var(--tertiary-color);
+  color: var(--white);
+}
+
 .cart .cart-container .cart-items img {
   width: 10rem;
   height: auto;
@@ -73,7 +89,7 @@ hr {
   border-top: 1px solid var(--grey);
 }
 
-button {
+.cart .cart-summary button {
   background-color: var(--tertiary-color);
   color: var(--white);
   padding: 8px 32px 8px 32px;
@@ -84,7 +100,7 @@ button {
   transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover {
+.cart .cart-summary button:hover {
   background-color: var(--primary-color);
   color: var(--white);
 }
