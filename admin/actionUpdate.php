@@ -1,6 +1,6 @@
 <?php
     include('../server/connection.php');
-    $path = "image/product/" . basename($_FILES['image']['name']);
+    $path = "./assets/images" . basename($_FILES['image']['name']);
 
     if (isset($_POST['save_btn'])) {
     $product_id = $_GET['product_id'];

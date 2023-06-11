@@ -112,12 +112,12 @@ $products = $stmt_products->get_result();
                 </div>
             </header>
             <main class="h-full pb-16 overflow-y-auto">
-                <?php foreach ($products as $product) { ?>
-                    <form method="POST" action="actionUpdate.php?product_id=<?php echo $product['product_id'] ?>" enctype="multipart/form-data">
-                        <div class="container px-6 mx-auto grid">
-                            <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-                                Edit Product
-                            </h2>
+                <div class="container px-6 mx-auto grid">
+                    <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                        Edit Product
+                    </h2>
+                    <?php foreach ($products as $product) { ?>
+                        <form method="POST" action="actionUpdate.php?product_id=<?php echo $product['product_id'] ?>" enctype="multipart/form-data">
                             <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
                                 <label class="block text-sm">
                                     <span class="text-gray-700 dark:text-gray-400">Name</span>
@@ -150,9 +150,9 @@ $products = $stmt_products->get_result();
                                     </button>
                                 </div>
                             </div>
-                        </div>
-                    </form>
-                <?php } ?>
+                        </form>
+                    <?php } ?>
+                </div>
             </main>
         </div>
     </div>

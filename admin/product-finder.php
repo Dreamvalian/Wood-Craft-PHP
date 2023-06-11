@@ -12,7 +12,6 @@ if(isset($_GET['searchInput'])){
     $searchDataQuery = "SELECT jenis_kayu, product_price, product_description, stok, product_image from kayu
     where jenis_kayu like '%$searchData%' OR product_price like '%$searchData%' or product_image like '%$searchData%'";
     $stmt_kayu = $conn->prepare($searchDataQuery);
-    // $stmt_customer-> bind_param('s', $searchData);
     $stmt_kayu->execute();
     $kayu = $stmt_kayu->get_result();
 }
