@@ -9,10 +9,10 @@ if (!isset($_SESSION['logged_in'])) {
   exit;
 }
 
-$query_product = "SELECT product_id, jenis_kayu, product_price, product_description, product_image FROM kayu";
-$stmt_product = $conn->prepare($query_product);
-$stmt_product->execute();
-$products = $stmt_product->get_result();
+$query_all_product = "SELECT product_id, jenis_kayu, product_price, product_description, product_image FROM kayu";
+$stmt_all_product = $conn->prepare($query_all_product);
+$stmt_all_product->execute();
+$products = $stmt_all_product->get_result();
 
 ?>
 
@@ -54,8 +54,8 @@ $products = $stmt_product->get_result();
       <div class="slider owl-carousel">
         <?php while ($row = $products->fetch_assoc()) { ?>
           <div class="slide">
-            <a href="./product-detail.php?">
-              <img class="product-image" src="./assets/images/<?php echo $row['product_image']; ?>" alt="product-slider-1">
+            <a href="product-detail.php?product_id=<?php echo $row['product_id'] ?>">
+              <img class="product-image" src="./assets/images/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_image']; ?>">
             </a>
             <h4 class="slide-title"><?php echo $row['jenis_kayu']; ?></h4>
             <p class="slide-subtitle"><?php echo $row['product_description']; ?></p>

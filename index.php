@@ -16,6 +16,7 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['user_name']);
     unset($_SESSION['user_email']);
     unset($_SESSION['user_address']);
+    unset($_SESSION['member_date']);
     unset($_SESSION['user_role']);
     header('location: ./pages/login.html');
     exit;
