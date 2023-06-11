@@ -71,13 +71,8 @@
 
 .add-to-cart {
   background-color: var(--white);
-  border: 1px solid var(--tertiary-color);
-  border-radius: 4px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  padding: 2rem;
+  border-radius: 0.4rem;
   box-shadow: var(--box-shadow);
 }
 

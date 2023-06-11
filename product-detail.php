@@ -71,10 +71,7 @@ $product = $stmt_product->get_result();
         <div class="cart-content">
           <h5>Organize Order</h5>
           <div class="input-wrapper">
-            <button id="minus-btn">-</button>
-
             <input type="number" id="range-input" name="order_quantity" min="0" max="100" step="1" value="50">
-            <button id="plus-btn">+</button>
           </div>
         </div>
         <div class="cart-stock">
@@ -84,7 +81,6 @@ $product = $stmt_product->get_result();
           </hr>
           <button id="add-to-cart-btn" type="submit" name="add_to_cart">Add to Cart</button>
           </form>
-          <button id="add-to-cart-btn">Buy Now</button>
         </div>
 
     </section>

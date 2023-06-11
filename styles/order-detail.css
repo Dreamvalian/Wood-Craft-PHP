@@ -1,0 +1,68 @@
+@import url("variable.css");
+
+
+body {
+  font-family: var(--font-stack-body);
+  margin: 0;
+}
+
+.breadcrumb {
+  padding: 6rem 2rem 2rem 2rem;
+}
+
+.breadcrumb a {
+  color: var(--grey);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--secondary-color);
+}
+
+.breadcrumb span {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.breadcrumb::after {
+  content: ">";
+  margin: 0 5px;
+  color: var(--grey);
+}
+
+.breadcrumb::after:last-child {
+  content: none;
+}
+
+.order-detail h2 {
+  font-family: var(--font-stack-heading);
+  text-align: center;
+}
+
+
+.detail-container {
+  padding: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 0.5rem;
+  border: 1px solid var(--grey);
+}
+
+table th {
+  background-color: var(--tertiary-color);
+  color: var(--white);
+  font-weight: bold;
+  text-align: left;
+}
+
+table td {
+  text-align: center;
+}

@@ -110,7 +110,7 @@ if (empty($_SESSION['cart'])) {
               <form method="POST" action="cart.php">
                 <td>
                   <input type="hidden" name="product_id" value="<?php echo $value['product_id'] ?>">
-                  <button type="submit" class="button" name="remove_product"><i class="fa fa-trash">Buy Now</i></button>
+                  <button type="submit" class="button" name="remove_product"><i class="fa fa-trash">Remove</i></button>
                 </td>
               </form>
             </div>
@@ -155,10 +155,10 @@ if (empty($_SESSION['cart'])) {
       <hr>
 
 
-      <h5>Total Price: <?php if (isset($_SESSION['cart'])) {
-                          echo "Rp. " . $_SESSION['total'];
-                        } ?>
-      </h5>
+      <p>Total Price: <?php if (isset($_SESSION['cart'])) {
+                        echo "Rp. " . $_SESSION['total'];
+                      } ?>
+      </p>
       <form action="checkout.php" method="post">
         <button id="add-to-cart-btn" name="checkout">Buy Now</button>
       </form>
