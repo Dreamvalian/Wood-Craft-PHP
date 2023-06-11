@@ -40,7 +40,7 @@ if (isset($_POST['place_order'])) {
 
     if (!$stmt_status) {
         echo '<script>alert("Something went wrong, try again later");
-        window.location.href = "checkout.php";
+        window.location.href = "../checkout.php";
         </script>';
         exit;
     }

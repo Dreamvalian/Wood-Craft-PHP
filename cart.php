@@ -155,7 +155,7 @@ if (empty($_SESSION['cart'])) {
       </h5>
 
       <h5>Total Price: <?php if (isset($_SESSION['cart'])) {
-                          echo $_SESSION['total'];
+                          echo "Rp. " . $_SESSION['total'];
                         } ?>
       </h5>
       <form action="checkout.php" method="post">
