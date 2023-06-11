@@ -22,10 +22,10 @@
     </ul>
     <ul>
       <li>
-        <a href="/our-story.php" class="footer-item">Our Story</a>
+        <a href="our-story.php" class="footer-item">Our Story</a>
       </li>
       <li>
-        <a href="/map.php" class="footer-item">Our Location</a>
+        <a href="map.php" class="footer-item">Our Location</a>
       </li>
       <li>
         <a href="#" class="footer-item">News</a>
@@ -36,13 +36,13 @@
     </ul>
     <ul>
       <li>
-        <a href="/our-product.php" class="footer-item">Our Product</a>
+        <a href="our-product.php" class="footer-item">Our Product</a>
       </li>
       <li>
-        <a href="/about.php" class="footer-item">About Us</a>
+        <a href="about.php" class="footer-item">About Us</a>
       </li>
       <li>
-        <a href="/contact.php" class="footer-item">Contact</a>
+        <a href="contact.php" class="footer-item">Contact</a>
       </li>
     </ul>
     <ul class="social">

@@ -8,6 +8,7 @@ if (isset($_POST['create_btn'])) {
   $stmt_id->store_result();
 
   $product_id = 'P0' . ($stmt_id->num_rows + 1);
+
   $product_name = $_POST['product_name'];
   $product_price = $_POST['product_price'];
   $product_description = $_POST['product_description'];
@@ -16,15 +17,16 @@ if (isset($_POST['create_btn'])) {
   $target_file = "../assets/images/" . basename($_FILES["image"]["name"]);
 
   if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-    $query = "INSERT INTO kayu VALUES (?, ?, ?, ?, ?, ?)";
+    $query = "INSERT INTO kayu (product_id, jenis_kayu, product_price, product_description, stok, product_image) 
+    VALUES (?, ?, ?, ?, ?, ?)";
     $stmt_insert = $conn->prepare($query);
-    $stmt_insert->bind_param("ssssss", $product_id, $product_name, $product_price, $product_description, $product_stok, $image);
+    $stmt_insert->bind_param("ssdsis", $product_id, $product_name, $product_price, $product_description, $product_stok, $image);
     $result = $stmt_insert->execute();
 
     if ($result) {
-      $success = true;
+      $success = 'true';
     } else {
-      $success = false;
+      $success = 'false';
     }
 
     header("location: tables.php?success=$success");

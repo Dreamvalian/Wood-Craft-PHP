@@ -1,7 +1,17 @@
 <?php
+session_start();
 
-@include('./components/Header.php')
+@include('./components/Header.php');
+include('server/connection.php');
 
+$order_id = $_GET['order_id'];
+
+$q_order_items = "SELECT * FROM item_pesanan WHERE order_id LIKE ?";
+$stmt_order_items = $conn->prepare($q_order_items);
+$stmt_order_items->bind_param('s', $order_id);
+$stmt_order_items->execute();
+
+$order_items = $stmt_order_items->get_result();
 ?>
 
 <!DOCTYPE html>
@@ -28,25 +38,25 @@
       <table>
         <thead>
           <tr>
+            <th>Image</th>
             <th>Name</th>
+            <th>Description</th>
             <th>Price</th>
             <th>Quantity</th>
             <th>Date</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>May 10, 2023</td>
-            <td>Payment for item A</td>
-            <td>$50.00</td>
-            <td>Paid</td>
-          </tr>
-          <tr>
-            <td>April 25, 2023</td>
-            <td>Payment for item B</td>
-            <td>$30.00</td>
-            <td>Unpaid</td>
-          </tr>
+          <?php foreach ($order_items as $item) { ?>
+            <tr>
+              <td><img src="assets/images/<?php echo $item['product_image'] ?>" alt="<?php echo $item['product_image'] ?>" style="width: 128; height:128;"></td>
+              <td><?php echo $item['product_name'] ?></td>
+              <td><?php echo $item['product_model'] ?></td>
+              <td><?php echo $item['product_price'] ?></td>
+              <td><?php echo $item['quantity'] ?></td>
+              <td><?php echo $item['order_date'] ?></td>
+            </tr>
+          <?php } ?>
         </tbody>
       </table>
     </div>
