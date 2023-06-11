@@ -30,7 +30,11 @@ if (isset($_SESSION['logged_in'])) {
         $_SESSION['user_role'] = $user_role;
         $_SESSION['logged_in'] = true;
 
-        header('location: ../index.php?message=Logged in successfully');
+        if ($user_role == 'admin') {
+          header('location: ../admin/index.php?message=Logged in successfully as admin');
+        } else {
+          header('location: ../index.php?message=Logged in successfully');
+        }
       } else {
         header('location: ../pages/login.html?message=Account does not match our database');
       }
@@ -39,3 +43,4 @@ if (isset($_SESSION['logged_in'])) {
     }
   }
 }
+?>

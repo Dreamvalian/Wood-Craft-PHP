@@ -10,6 +10,9 @@ if (mysqli_query($conn, $query)) {
         window.location.href='tables.php';
         </script>";
 }
+else{
+    echo "Error deleting product: " . mysqli_error($conn);
+}
 die();
 
 ?>
