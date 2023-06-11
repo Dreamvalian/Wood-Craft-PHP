@@ -82,6 +82,11 @@ if (isset($_POST['place_order'])) {
             $order_date
         );
         $stmt_insert_item->execute();
+
+        $q_update_stock = "UPDATE kayu SET stok = stok - ? WHERE product_id = ?";
+        $stmt_update_stock = $conn->prepare($q_update_stock);
+        $stmt_update_stock->bind_param('is', $product_quantity, $product_id);
+        $stmt_update_stock->execute();
     }
 
     unset($_SESSION['cart']);
