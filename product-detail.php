@@ -42,7 +42,7 @@ $product = $stmt_product->get_result();
           <h5>Model</h5>
           <div class="product-model">
             <label>
-              <input type="radio" name="product_model" value="1 pcs Lemari 2 pintu" checked>
+              <input type="radio" name="product_model" value="1 pcs Lemari 2 pintu">
               <img src="assets/images/lemari.jpg" alt="Option 1" style="width: 128; height:128;">
             </label>
 
